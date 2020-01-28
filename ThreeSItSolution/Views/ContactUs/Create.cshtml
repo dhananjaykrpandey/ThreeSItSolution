@@ -1,0 +1,54 @@
+﻿@model ThreeSItSolution.Models.MContactUs
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>MContactUs</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CName" class="control-label"></label>
+                <input asp-for="CName" class="form-control" />
+                <span asp-validation-for="CName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CEmailId" class="control-label"></label>
+                <input asp-for="CEmailId" class="form-control" />
+                <span asp-validation-for="CEmailId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CSubject" class="control-label"></label>
+                <input asp-for="CSubject" class="form-control" />
+                <span asp-validation-for="CSubject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CMessage" class="control-label"></label>
+                <input asp-for="CMessage" class="form-control" />
+                <span asp-validation-for="CMessage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DCreateDate" class="control-label"></label>
+                <input asp-for="DCreateDate" class="form-control" />
+                <span asp-validation-for="DCreateDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

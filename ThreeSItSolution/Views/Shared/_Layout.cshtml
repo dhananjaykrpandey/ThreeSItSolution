@@ -1,48 +1,327 @@
-﻿<!DOCTYPE html>
+﻿@{
+    ViewData["Title"] = "3S IT Training and Business Solution";
+    Layout = null;
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ThreeSItSolution</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <meta charset="utf-8">
+    <title>@ViewData["Title"]</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <environment include="Staging,Production">
+        <!--<strong>HostingEnvironment.EnvironmentName is not Development</strong>-->
+        <!-- Favicons -->
+        <link href="~/img/LogoIcon48X48.jpg" rel="icon">
+        <link href="~/img/LogoIcon48X48.jpg" rel="apple-touch-icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+        <!-- Bootstrap CSS File -->
+        <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Libraries CSS Files -->
+        <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="~/lib/animate/animate.min.css" rel="stylesheet">
+        <link href="~/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+        <link href="~/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="~/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Main Stylesheet File -->
+        <link href="~/css/style.css" rel="stylesheet">
+    </environment>
+    <environment include="Development">
+        <!--<strong>HostingEnvironment.EnvironmentName is not Development</strong>-->
+        <!-- Favicons -->
+        <link href="~/img/LogoIcon48X48.jpg" rel="icon">
+        <link href="~/img/LogoIcon48X48.jpg" rel="apple-touch-icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+        <!-- Bootstrap CSS File -->
+        <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Libraries CSS Files -->
+        <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="~/lib/animate/animate.min.css" rel="stylesheet">
+        <link href="~/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+        <link href="~/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="~/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Main Stylesheet File -->
+        <link href="css/style.css" rel="stylesheet">
+    </environment>
+    <!-- =======================================================
+      Theme Name: NewBiz
+      Theme URL: https://bootstrapmade.com/newbiz-bootstrap-business-template/
+      Author: BootstrapMade.com
+      License: https://bootstrapmade.com/license/
+    ======================================================= -->
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ThreeSItSolution</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+
+    <!--==========================
+    Header
+    ============================-->
+    <header id="header" class="fixed-top">
+        <div class="container">
+
+            <div class="logo float-left">
+                <!-- Uncomment below if you prefer to use an image logo -->
+
+                <a asp-action="Index" asp-controller="Home" asp-fragment="intro" class="scrollto"> <h6 class="text-dark"><img src="~/img/LogoIconMain.png" alt="" class="img-fluid"><span> @ViewData["Title"]</span></h6></a>
+                @*<h5 class="text-light"><a href="#header"><span>@ViewData["Title"]</span></a></h5>*@
+            </div>
+
+            <nav class="main-nav float-right d-none d-lg-block">
+                <ul>
+                    <li class="active"><a asp-action="Index" asp-controller="Home">Home</a></li>
+                    <li><a  asp-action="Index" asp-controller="Home" asp-fragment="about">About Us</a></li>
+                    <li class="drop-down">
+                        <a asp-action="Index" asp-controller="Home" asp-fragment="services">Courses</a>
+                        <ul>
+                            <li class="drop-down">
+                                <a asp-action="Index" asp-controller="Home" asp-fragment="">MicorSoft</a>
+                                <ul>
+                                    <li><a asp-action="Index" asp-controller="Home" asp-fragment="">MOS 2016/2019</a></li>
+                                    <li><a asp-action="Index" asp-controller="Home" asp-fragment="">Office 365 2016/2019</a></li>
+                                    <li><a asp-action="Index" asp-controller="Home" asp-fragment="">MCSA Windows Sever 2016</a></li>
+                                    <li><a asp-action="Index" asp-controller="Home" asp-fragment="">MCSA SQL Sever 2014/2016</a></li>
+                                    <li><a asp-action="Index" asp-controller="Home" asp-fragment="">MCSA Web Application</a></li>
+                                    <li><a asp-action="Index" asp-controller="Home" asp-fragment="">Azure Data Scientist Associate</a></li>
+                                </ul>
+                            </li>
+                            <li class="drop-down">
+                                <a asp-action="Index" asp-controller="Home" asp-fragment="">Oracle</a>
+                                <ul>
+                                    <li><a asp-action="Index" asp-controller="Home" asp-fragment="">Oracle Cloud Infrastructure</a></li>
+                                    <li><a asp-action="Index" asp-controller="Home" asp-fragment="">Oracle Database</a></li>
+                                    <li><a asp-action="Index" asp-controller="Home" asp-fragment="">Oracle Enterprise Management</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="drop-down">
+                                <a asp-action="Index" asp-controller="Home" asp-fragment="">Cicso</a>
+                                <ul>
+                                    <li><a asp-action="Index" asp-controller="Home" asp-fragment="">CCNA</a></li>
+                                    <li><a asp-action="Index" asp-controller="Home" asp-fragment="">CCNA Cyber Ops</a></li>
+                                    <li><a asp-action="Index" asp-controller="Home" asp-fragment="">CCNP Enterprise</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="drop-down">
+                                <a asp-action="Index" asp-controller="Home" asp-fragment="">Tableau</a>
+                                <ul>
+                                    <li><a asp-action="Index" asp-controller="Home" asp-fragment="">Tableau Desktop Training</a></li>
+                                    <li><a asp-action="Index" asp-controller="Home" asp-fragment="">Tableau Data Visualization & Machine Learning</a></li>
+                                </ul>
+                            </li>
+                            <li><a asp-action="Index" asp-controller="Home" asp-fragment="">Python</a></li>
+                            <li><a asp-action="Index" asp-controller="Home" asp-fragment="">R-Programing</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a asp-action="Index" asp-controller="Home" asp-fragment="why-us">Why Us</a></li>
+                    <li><a asp-action="Index" asp-controller="Home" asp-fragment="portfolio">Placements</a></li>
+                    <li><a asp-action="Index" asp-controller="Home" asp-fragment="businesspartner">Business Partners</a></li>
+                    <li><a asp-action="Index" asp-controller="ContactUs">Contact Us</a></li>
+                    <li>
+                        <a asp-action="Index" asp-controller="ContactUs">
+                            <i class="fa fa-user-circle-o" style="color: #ff689b;" data-toggle="tooltip" data-placement="bottom" title="Login/Register"></i>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav><!-- .main-nav -->
+
+        </div>
+    </header><!-- #header -->
+    <!--==========================
+      Intro Section
+    ============================-->
+    <section id="Contanctintro" class="clearfix">
+        @*<div class="container">
+
+            <div class="intro-img">
+                <img src="/img/intro-img.svg" alt="" class="img-fluid">
+            </div>
+
+            <div class="intro-info">
+                <h2>We provide<br><span>Courses</span><br>that fit for your career growth!</h2>
+                <div>
+                    <a href="#about" class="btn-get-started scrollto">Enquiry</a>
+                    <a href="#services" class="btn-services scrollto">Our Courses</a>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; @DateTime.Now - 3S IT Training and Business Solution - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>*@
+    </section><!-- #intro -->
+
+    <main id="main">
+
+        @RenderBody()
+
+
+    </main>
+
+    <!--==========================
+      Footer
+    ============================-->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-6 footer-info">
+                        <a a asp-action="Index" asp-controller="Home" asp-fragment="intro" class="scrollto"> <h4 class="text-light"><img src="~/img/LogoIconMain.png" alt="" class="img-fluid" width="32" height="32"><span> &nbsp;@ViewData["Title"]</span></h4></a>
+                        <p>@ViewData["Title"]  is a pioneer in IT education with a view to offer a broad   portfolio of computer training programs for the corporate as well as   the career oriented youth of the country.</p>
+                        <p>
+                            Your Training is our aim. We focus on offering you the best class-room / virtual experience along with the best customer service, to ensure that you will come back class-after-class. Our customer satisfaction and quality measurement process is monitored by the vendors and we win awards year-after-year demonstrating that we are among the best.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><a asp-action="Index" asp-controller="Home">Home</a></li>
+                            <li><a asp-action="Index" asp-controller="Home" asp-fragment="">About us</a></li>
+                            <li><a asp-action="Index" asp-controller="Home" asp-fragment="">Services</a></li>
+                            <li><a asp-action="Index" asp-controller="Home" asp-fragment="">Terms of service</a></li>
+                            <li><a asp-action="Index" asp-controller="Home" asp-fragment="">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    @*<div class="col-lg-3 col-md-6 footer-contact">
+                        <h4>Contact Us</h4>
+                        <p>
+                            A108 Adam Street <br>
+                            New York, NY 535022<br>
+                            United States <br>
+                            <strong>Phone:</strong> +1 5589 55488 55<br>
+                            <strong>Email:</strong> info@example.com<br>
+                        </p>
+
+                        <div class="social-links">
+                            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                            <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                        </div>
+
+                    </div>*@
+
+                <div class="col-lg-4 col-md-6 footer-newsletter">
+                    <h4>Our Newsletter</h4>
+                    <p>Subscribe to our newsletter!</p>
+                    <form action="" method="post">
+                        <input type="email" name="email"><input type="submit" value="Subscribe">
+                    </form>
+                    <p>You’ll get an email about once a week. We’ll never share your address.</p>
+                </div>
+
+                </div>
+            </div>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @RenderSection("Scripts", required: false)
+
+        <div class="container">
+            <div class="copyright">
+                &copy;Copyright @DateTime.Now.Year - <strong>@ViewData["Title"]</strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!--
+                  All the links in the footer should remain intact.
+                  You can delete the links only if you purchased the pro version.
+                  Licensing information: https://bootstrapmade.com/license/
+                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=NewBiz
+                -->
+                Developed by <a href="https://bootstrapmade.com/">Arnika Technologies</a>
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+    </footer><!-- #footer -->
+    @*<environment include="Development">*@
+    <a asp-action="Index" asp-controller="Home" asp-fragment="" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <!-- Uncomment below i you want to use a preloader -->
+    <!-- <div id="preloader"></div> -->
+    <!-- JavaScript Libraries -->
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/jquery/jquery-migrate.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/easing/easing.min.js"></script>
+    <script src="~/lib/mobile-nav/mobile-nav.js"></script>
+    <script src="~/lib/wow/wow.min.js"></script>
+    <script src="~/lib/waypoints/waypoints.min.js"></script>
+    <script src="~/lib/counterup/counterup.min.js"></script>
+    <script src="~/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="~/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="~/lib/lightbox/js/lightbox.min.js"></script>
+    <!-- Contact Form JavaScript File -->
+    @*<script src="contactform/contactform.js"></script>*@
+
+    <!-- Template Main Javascript File -->
+    <script src="js/main.js"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    @*</environment>*@
 </body>
 </html>
+
+
+@*<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - ThreeSItSolution</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ThreeSItSolution</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; @DateTime.Now - 3S IT Training and Business Solution - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @RenderSection("Scripts", required: false)
+    </body>
+    </html>*@

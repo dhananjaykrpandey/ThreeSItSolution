@@ -1474,23 +1474,23 @@ h6 {
 /* Business Partner Section
 --------------------------------*/
 
-#BusinessPartner {
+#businesspartner {
     padding: 60px 0;
     box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
     background: #004a99;
     color: #fff;
 }
-    #BusinessPartner .section-header h3,
-    #BusinessPartner .section-header p {
+    #businesspartner .section-header h3,
+    #businesspartner .section-header p {
         color: #fff;
     }
-    #BusinessPartner .BusinessPartner-wrap {
+    #businesspartner .businesspartner-wrap {
         border-top: 1px solid #d6eaff;
         border-left: 1px solid #d6eaff;
         margin-bottom: 30px;
     }
 
-    #BusinessPartner .BusinessPartner-logo {
+    #businesspartner .businesspartner-logo {
         padding: 64px;
         display: -webkit-box;
         display: -webkit-flex;
@@ -1511,11 +1511,22 @@ h6 {
         height: 160px;
     }
 
-        #BusinessPartner .BusinessPartner-logo:hover img {
+        #businesspartner .businesspartner-logo:hover img {
             -webkit-transform: scale(1.2);
             transform: scale(1.2);
         }
 
-    #BusinessPartner img {
+    #businesspartner img {
         transition: all 0.4s ease-in-out;
     }
+
+
+#Contanctintro {
+    width: 100%;
+    position: relative;
+    /*<!--background: url("../img/intro-bg.png") center bottom no-repeat;-->*/
+    background-size: cover;
+    background-color: #004a99;
+    padding: 50px 0 120px 0;
+}
+

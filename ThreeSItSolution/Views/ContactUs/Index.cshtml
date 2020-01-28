@@ -1,0 +1,199 @@
+﻿@model IEnumerable<ThreeSItSolution.Models.MContactUs>
+
+@{
+    ViewData["Title"] = "Contact Us";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!--==========================
+       Contact Section
+     ============================-->
+<section id="contact">
+    <div class="container-fluid">
+
+        <div class="section-header">
+            <h3>Contact Us</h3>
+        </div>
+        @*
+
+
+
+
+
+            Email: info@3s-itsolutions.co.za
+
+            Website: www.3s-itsolutions.co.za
+
+            Preferred URL Index :
+
+
+
+            Republic of South Africa Address (Flag Icon)
+
+            3S IT TRAINING AND BUSINESS SOLUTIONS
+
+            35, EDENVALE, Gauteng,
+
+            Johannesburg, RSA
+
+            Mobile: +27-655311361 WhatsApp: +27-655311361
+
+            Email: info@3s-itsolutions.co.za
+
+            Website: www.3s-itsolutions.co.za
+
+            Preferred URL Index : www.3s-itsolutions.co.za/sa*@
+        <div class="row wow fadeInUp">
+            <div class="col-lg-6 info">
+                <h3>
+                    Republic of South Africa Address
+
+                    <img src="~/img/south-africa-flag-icon-64.png" alt="" class="img-fluid">
+                </h3>
+                <i class="ion-ios-location-outline"></i>
+                <p>
+                    3S IT TRAINING AND BUSINESS SOLUTIONS
+                    35, EDENVALE, Gauteng,
+                    Johannesburg, RSA
+                </p>
+                <i class="ion-ios-email-outline"></i>
+                <p>info@3s-itsolutions.co.za</p>
+                <i class="ion-ios-telephone-outline"></i>
+                <p>+27-655311361</p>
+                <i class="ion-social-whatsapp-outline"></i>
+                <p>+27-655311361</p>
+                <i class="ion-ios-world-outline"></i>
+                <p>www.3s-itsolutions.co.za/sa</p>
+                <p><button class="btn btn-outline-success text-primary"><i class="ion-chatbubble"></i> &nbsp; &nbsp; Chat Now</button></p>
+               
+            </div>
+            <div class="col-lg-6">
+                <div class="map mb-4 mb-lg-0">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 312px;" allowfullscreen></iframe>
+                </div>
+            </div>
+
+        </div>
+        <div class="row wow fadeInUp">
+
+        </div>
+        <div class="row wow fadeInUp">
+
+        </div>
+        <div class="row wow fadeInUp">
+            <div class="col-lg-6 info">
+                <h3>Kingdom of Eswatini Address <img src="~/img/swaziland-flag-icon-64.png" alt="" class="img-fluid" /></h3>
+                <i class="ion-ios-location-outline"></i>
+                <p class="description">
+                    3S ESWATINI IT SERVICES (PTY) LTD
+                    Marvi 2, Next to Golf Course Flats,
+                    Mantsholo Street, Mbabane
+                    HHOHHO Region, Kingdom of Eswatini
+                </p>
+                <i class="ion-ios-email-outline"></i>
+                <p>info@3s-itsolutions.co.za</p>
+                <i class="ion-ios-telephone-outline"></i>
+                <p>+268-24042891</p>
+                <i class="ion-android-phone-portrait "></i>
+                <p>+268-76157250</p>
+                <i class="ion-ios-world-outline"></i>
+                <p> www.3s-itsolutions.co.za/eswatini</p>
+                <p><button class="btn btn-outline-success text-primary"><i class="ion-chatbubble"></i> &nbsp; &nbsp; Chat Now</button></p>
+            </div>
+            <div class="col-lg-6">
+                <div class="map mb-4 mb-lg-0">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 312px;" allowfullscreen></iframe>
+                </div>
+            </div>
+
+        </div>
+        <div class="row wow fadeInUp">
+
+        </div>
+        <div class="row wow fadeInUp justify-content-lg-center">
+            <div class="col-lg-8 col-md-8 col-sm-8">
+
+
+                <div class="form">
+                    <div id="sendmessage">Your message has been sent. Thank you!</div>
+                    <div id="errormessage"></div>
+                    <form action="" method="post" role="form" class="contactForm">
+                        <div class="form-row">
+                            <div class="form-group col-lg-6">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                                <div class="validation"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                            <div class="validation"></div>
+                        </div>
+                        <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section><!-- #contact -->
+@*<h1>Index</h1>
+
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CEmailId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CSubject)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CMessage)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DCreateDate)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CEmailId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CSubject)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CMessage)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DCreateDate)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.IID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IID">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>*@
