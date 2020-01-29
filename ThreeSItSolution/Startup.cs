@@ -35,6 +35,9 @@ namespace ThreeSItSolution
                 options.LowercaseUrls = true;
                 //options.AppendTrailingSlash = true;
             });
+
+            //var emailConfig = Configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>();
+            //services.AddSingleton(emailConfig);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

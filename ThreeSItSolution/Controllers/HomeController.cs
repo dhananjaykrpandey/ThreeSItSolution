@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+
 using System.Threading.Tasks;
+using MailKit.Net.Smtp;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using MimeKit;
 using ThreeSItSolution.Models;
 
 namespace ThreeSItSolution.Controllers
@@ -25,7 +28,9 @@ namespace ThreeSItSolution.Controllers
 
         public IActionResult Index()
         {
+            SendMail();
             return View();
+            
         }
 
         public IActionResult Privacy()
@@ -67,6 +72,58 @@ namespace ThreeSItSolution.Controllers
             ViewBag.Name = _Name;
             ViewBag.Email = _Email;
             return View();
+        }
+
+        public void SendMail()
+        {
+            try
+            {
+                //From Address    
+                string FromAddress = "pilandupandey@gmail.com";
+                string FromAdressTitle = "pilandupandey@gmail.com";
+                //To Address    
+                string ToAddress = "pilandupandey@gmail.com";
+                string ToAdressTitle = "Microsoft ASP.NET Core";
+                string Subject = "Tesing";
+                string BodyContent = "Testing";
+
+                //Smtp Server    
+                string SmtpServer = "smtp.gmail.com";
+                //Smtp Port Number    
+                int SmtpPortNumber = 465;
+
+                var mimeMessage = new MimeMessage();
+                mimeMessage.From.Add(new MailboxAddress
+                                        (FromAdressTitle,
+                                         FromAddress
+                                         ));
+                mimeMessage.To.Add(new MailboxAddress
+                                         (ToAdressTitle,
+                                         ToAddress
+                                         ));
+                mimeMessage.Subject = Subject; //Subject  
+                mimeMessage.Body = new TextPart("plain")
+                {
+                    Text = BodyContent
+                };
+
+                using (var client = new SmtpClient())
+                {
+                    client.Connect(SmtpServer, SmtpPortNumber,true);
+                    client.Authenticate(
+                        "pilandupandey@gmail.com",
+                        "dj310382"
+                        );
+                    client.SendAsync(mimeMessage);
+                    Console.WriteLine("The mail has been sent successfully !!");
+                    Console.ReadLine();
+                    client.DisconnectAsync(true);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
