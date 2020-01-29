@@ -19,9 +19,10 @@ namespace ThreeSItSolution.Controllers
         }
 
         // GET: MContactUs
-        public async Task<IActionResult> Index()
+        public  IActionResult Index()
         {
-            return View(await _context.MContactUs.ToListAsync().ConfigureAwait(true));
+            //return View(await _context.MContactUs.ToListAsync().ConfigureAwait(true));
+            return View();
         }
 
         // GET: MContactUs/Details/5
@@ -53,7 +54,7 @@ namespace ThreeSItSolution.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IID,CName,CEmailId,CSubject,CMessage,DCreateDate")] MContactUs mContactUs)
+        public async Task<IActionResult> Index([Bind("IID,CName,CEmailId,CSubject,CMessage,DCreateDate")] MContactUs mContactUs)
         {
             if (ModelState.IsValid)
             {
