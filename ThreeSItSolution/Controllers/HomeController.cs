@@ -28,7 +28,7 @@ namespace ThreeSItSolution.Controllers
 
         public IActionResult Index()
         {
-            SendMail();
+            //SendMail();
             return View();
             
         }
