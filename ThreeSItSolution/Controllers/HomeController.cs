@@ -42,6 +42,11 @@ namespace ThreeSItSolution.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }   
+        public IActionResult AboutUs()
+        {
+          
+            return View();
         }
         public IActionResult ContactUs()
         {
@@ -73,7 +78,7 @@ namespace ThreeSItSolution.Controllers
             ViewBag.Email = _Email;
             return View();
         }
-
+    
         public void SendMail()
         {
             try

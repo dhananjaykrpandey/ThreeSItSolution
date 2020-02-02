@@ -83,6 +83,13 @@
                 <ul>
                     <li class="active"><a asp-action="Index" asp-controller="Home">Home</a></li>
                     <li><a href="#about">About Us</a></li>
+                    @*<li class="drop-down">
+                            <a href="#about">About Us</a>
+                            <ul>
+                                <li><a asp-action="aboutus" asp-controller="Home">Corporate and social</a></li>
+                                <li><a asp-action="aboutus" asp-controller="Home">Policy Statement</a></li>
+                            </ul>
+                        </li>*@
                     <li class="drop-down">
                         <a href="#services">Courses</a>
                         <ul>
@@ -280,12 +287,12 @@
                 <header class="section-header">
                     <h3>About Us</h3>
                     @*<p>
-                3S IT TRAINING AND BUSINESS SOLUTIONS. is a Global Learning Solutions company that commenced its education and training business in 2014 and has trained over 50,000 students worldwide
-                3S IT TRAINING has presence in Republic of South Africa and Kingdom of Eswatini (Formerly Known as Kingdom of Swaziland) emerging countries through its two main streams of businesses - Individual Training and Enterprise Business. As a leader in career education, it has 2 centers of learning.
-                Under Individual Training, 3S IT TRAINING offers career and professional training through its retail brands (Vendor Specific Programs): Microsoft, CISCO, ORACLE, PEOPLECERT, VMWare (IT, Banking & Finance, Hardware & Networking Training).
-                Enterprise business includes 3S IT TRAINING AND BUSINESS SOLUTIONS Assessment & Testing Solutions (Technology based contemporary assessment solutions) & 3S IT TRAINING’s Training Solutions (Customized training for Corporates & Institutions).
+                            3S IT TRAINING AND BUSINESS SOLUTIONS. is a Global Learning Solutions company that commenced its education and training business in 2014 and has trained over 50,000 students worldwide
+                            3S IT TRAINING has presence in Republic of South Africa and Kingdom of Eswatini (Formerly Known as Kingdom of Swaziland) emerging countries through its two main streams of businesses - Individual Training and Enterprise Business. As a leader in career education, it has 2 centers of learning.
+                            Under Individual Training, 3S IT TRAINING offers career and professional training through its retail brands (Vendor Specific Programs): Microsoft, CISCO, ORACLE, PEOPLECERT, VMWare (IT, Banking & Finance, Hardware & Networking Training).
+                            Enterprise business includes 3S IT TRAINING AND BUSINESS SOLUTIONS Assessment & Testing Solutions (Technology based contemporary assessment solutions) & 3S IT TRAINING’s Training Solutions (Customized training for Corporates & Institutions).
 
-            </p>*@
+                        </p>*@
                 </header>
 
                 <div class="row home-container">
@@ -315,11 +322,11 @@
                         <p>
                             3S IT TRAINING provides free-of-cost computer, Basic Computers and related training to underprivileged children and youth at its centers. 3S IT TRAINING endeavors not only to improve knowledge of students but also enhance employability of youth population.
                         </p>
-
+                        <a asp-action="aboutus" asp-controller="Home" class="readmore" style="float:right">Read more </a>
                     </div>
                 </div>
-               
-                <div class="row home-extra">
+
+                @*<div class="row home-extra">
                     <div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
                         <img src="~/img/Policy.jpg" class="img-fluid" alt="">
                     </div>
@@ -329,10 +336,10 @@
                         <p>
                             3S IT TRAINING AND BUSINESS SOLUTIONS PTY LTD and its subsidiaries believe that Corporate Social Responsibility is not merely an activity for ensuring South African compliance towards Section 71 of the Companies Act, 2008 along with Companies (Corporate Social Responsibility Policy) Rules 2014, however it’s the responsibility of the company towards the society, by positively impacting the lives of underprivileged.
                         </p>
-
+                        <a asp-action="aboutus" asp-controller="Home" class="readmore" style="float:right">Read more </a>
                     </div>
 
-                </div>
+                </div>*@
             </div>
         </section>
         <!--==========================
@@ -353,7 +360,7 @@
                             <div class="icon"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
                             <h4 class="title"><a href="">MicroSoft</a></h4>
                             <p class="description">
-                                Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident <br />
+                                Get certified for Microsoft technology and products. Explore our online developer & computer courses and exams, and take your career to a new level. <br /><br /><br />
                             </p>
                             <a href="#" class="readmore" style="float:right">Read more </a>
                         </div>
@@ -362,7 +369,7 @@
                         <div class="box">
                             <div class="icon"><i class="ion-ios-bookmarks-outline" style="color: #e9bf06;"></i></div>
                             <h4 class="title"><a href="">Cisco</a></h4>
-                            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+                            <p class="description">Cisco Certifications help you launch and advance your IT Networking career.Equip yourself with the right information today to face the technology of tomorrow, sign up for Cisco Training at  @ViewData["Title"]</p>
                             <a href="#" class="readmore" style="float:right">Read more </a>
                         </div>
                     </div>
@@ -371,7 +378,7 @@
                         <div class="box">
                             <div class="icon"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
                             <h4 class="title"><a href="">Oracle</a></h4>
-                            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                            <p class="description">Gain a competitive advantage in the IT industry. Earn your Oracle Certification from @ViewData["Title"], a leading training and certification company</p>
                             <a href="#" class="readmore" style="float:right">Read more </a>
                         </div>
                     </div>
@@ -379,7 +386,7 @@
                         <div class="box">
                             <div class="icon"><i class="ion-ios-speedometer-outline" style="color:#41cf2e;"></i></div>
                             <h4 class="title"><a href="">TABLEAU Desktop Training</a></h4>
-                            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                            <p class="description">Tableau is business intelligence software that helps people see and understand their data.<br /><br /><br /></p>
                             <a href="#" class="readmore" style="float:right">Read more </a>
                         </div>
                     </div>
@@ -388,7 +395,10 @@
                         <div class="box">
                             <div class="icon"><i class="ion-ios-world-outline" style="color: #d6ff22;"></i></div>
                             <h4 class="title"><a href="">Machine Learning with Python</a></h4>
-                            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                            <p class="description">
+                                Pythone is easy to learn, and it is a stepping stone into other languages and frameworks. Enroll now for the best project based programming language training in  @ViewData["Title"]
+                                <br /><br /><br />
+                            </p>
                             <a href="#" class="readmore" style="float:right">Read more </a>
                         </div>
                     </div>
@@ -396,7 +406,7 @@
                         <div class="box">
                             <div class="icon"><i class="ion-ios-clock-outline" style="color: #4680ff;"></i></div>
                             <h4 class="title"><a href="">R Programming</a></h4>
-                            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+                            <p class="description">R Programming A-Z™: R For Data Science With Real Exercises! Data Science and Machine Learning Bootcamp with R. R Programming: Advanced Analytics In R For Data Science. Introduction to Time Series Analysis and Forecasting in R. R Programming for Statistics and Data Science.</p>
                             <a href="#" class="readmore" style="float:right">Read more </a>
                         </div>
                     </div>
@@ -450,9 +460,11 @@
                             <i class="fa fa-object-group"></i>
                             <div class="card-body">
                                 <h5 class="card-title">IT Industry </h5>
-                                <p class="card-text">The Information Technology industry is a large industry. Over the past 50 years, IT has shaped the modern world & continues to change it.
-                                
-                                These companies take care of the client company’s ‘outsourced’ development & maintenance of software, training, etc.</p>
+                                <p class="card-text">
+                                    The Information Technology industry is a large industry. Over the past 50 years, IT has shaped the modern world & continues to change it.
+
+                                    These companies take care of the client company’s ‘outsourced’ development & maintenance of software, training, etc.
+                                </p>
                                 <a href="#" class="readmore">Read more </a>
                             </div>
                         </div>
@@ -491,158 +503,158 @@
           Portfolio Section
         ============================-->
 
-        @*<section id="portfolio" class="clearfix">
+        <section id="portfolio" class="clearfix">
             <div class="container">
 
                 <header class="section-header">
-                    <h3 class="section-title">Our Portfolio</h3>
+                    <h3 class="section-title">Placement</h3>
                 </header>
 
-                <div class="row">
-                    <div class="col-lg-12">
-                        <ul id="portfolio-flters">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-app">App</li>
-                            <li data-filter=".filter-card">Card</li>
-                            <li data-filter=".filter-web">Web</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="row portfolio-container">
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="img/portfolio/app1.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4><a href="#">App 1</a></h4>
-                                <p>App</p>
-                                <div>
-                                    <a href="img/portfolio/app1.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
-                                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                                </div>
-                            </div>
+                @*<div class="row">
+                        <div class="col-lg-12">
+                            <ul id="portfolio-flters">
+                                <li data-filter="*" class="filter-active">All</li>
+                                <li data-filter=".filter-app">App</li>
+                                <li data-filter=".filter-card">Card</li>
+                                <li data-filter=".filter-web">Web</li>
+                            </ul>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
-                        <div class="portfolio-wrap">
-                            <img src="img/portfolio/web3.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4><a href="#">Web 3</a></h4>
-                                <p>Web</p>
-                                <div>
-                                    <a href="img/portfolio/web3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
-                                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                    <div class="row portfolio-container">
+
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                            <div class="portfolio-wrap">
+                                <img src="img/portfolio/app1.jpg" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+                                    <h4><a href="#">App 1</a></h4>
+                                    <p>App</p>
+                                    <div>
+                                        <a href="img/portfolio/app1.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+                                        <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
-                        <div class="portfolio-wrap">
-                            <img src="img/portfolio/app2.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4><a href="#">App 2</a></h4>
-                                <p>App</p>
-                                <div>
-                                    <a href="img/portfolio/app2.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
-                                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
+                            <div class="portfolio-wrap">
+                                <img src="img/portfolio/web3.jpg" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+                                    <h4><a href="#">Web 3</a></h4>
+                                    <p>Web</p>
+                                    <div>
+                                        <a href="img/portfolio/web3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
+                                        <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="img/portfolio/card2.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4><a href="#">Card 2</a></h4>
-                                <p>Card</p>
-                                <div>
-                                    <a href="img/portfolio/card2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
-                                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
+                            <div class="portfolio-wrap">
+                                <img src="img/portfolio/app2.jpg" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+                                    <h4><a href="#">App 2</a></h4>
+                                    <p>App</p>
+                                    <div>
+                                        <a href="img/portfolio/app2.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
+                                        <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
-                        <div class="portfolio-wrap">
-                            <img src="img/portfolio/web2.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4><a href="#">Web 2</a></h4>
-                                <p>Web</p>
-                                <div>
-                                    <a href="img/portfolio/web2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
-                                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                            <div class="portfolio-wrap">
+                                <img src="img/portfolio/card2.jpg" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+                                    <h4><a href="#">Card 2</a></h4>
+                                    <p>Card</p>
+                                    <div>
+                                        <a href="img/portfolio/card2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
+                                        <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
-                        <div class="portfolio-wrap">
-                            <img src="img/portfolio/app3.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4><a href="#">App 3</a></h4>
-                                <p>App</p>
-                                <div>
-                                    <a href="img/portfolio/app3.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
-                                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
+                            <div class="portfolio-wrap">
+                                <img src="img/portfolio/web2.jpg" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+                                    <h4><a href="#">Web 2</a></h4>
+                                    <p>Web</p>
+                                    <div>
+                                        <a href="img/portfolio/web2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
+                                        <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="img/portfolio/card1.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4><a href="#">Card 1</a></h4>
-                                <p>Card</p>
-                                <div>
-                                    <a href="img/portfolio/card1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
-                                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
+                            <div class="portfolio-wrap">
+                                <img src="img/portfolio/app3.jpg" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+                                    <h4><a href="#">App 3</a></h4>
+                                    <p>App</p>
+                                    <div>
+                                        <a href="img/portfolio/app3.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
+                                        <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card" data-wow-delay="0.1s">
-                        <div class="portfolio-wrap">
-                            <img src="img/portfolio/card3.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4><a href="#">Card 3</a></h4>
-                                <p>Card</p>
-                                <div>
-                                    <a href="img/portfolio/card3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
-                                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                            <div class="portfolio-wrap">
+                                <img src="img/portfolio/card1.jpg" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+                                    <h4><a href="#">Card 1</a></h4>
+                                    <p>Card</p>
+                                    <div>
+                                        <a href="img/portfolio/card1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
+                                        <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.2s">
-                        <div class="portfolio-wrap">
-                            <img src="img/portfolio/web1.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4><a href="#">Web 1</a></h4>
-                                <p>Web</p>
-                                <div>
-                                    <a href="img/portfolio/web1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
-                                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-card" data-wow-delay="0.1s">
+                            <div class="portfolio-wrap">
+                                <img src="img/portfolio/card3.jpg" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+                                    <h4><a href="#">Card 3</a></h4>
+                                    <p>Card</p>
+                                    <div>
+                                        <a href="img/portfolio/card3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
+                                        <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                </div>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.2s">
+                            <div class="portfolio-wrap">
+                                <img src="img/portfolio/web1.jpg" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+                                    <h4><a href="#">Web 1</a></h4>
+                                    <p>Web</p>
+                                    <div>
+                                        <a href="img/portfolio/web1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
+                                        <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>*@
 
             </div>
-        </section>*@
-    
-    <!-- #portfolio -->
+        </section>
+
+        <!-- #portfolio -->
         <!--==========================
           Business Partner Section
         ============================-->
@@ -659,51 +671,51 @@
 
                     <div class="col-lg-3 col-md-4 col-xs-6">
                         <div class="businesspartner-logo">
-                            <a href="#"><img src="~/img/businesspartner/Arnika3.png" class="img-fluid" alt="Arnika Technologies"></a>
+                            <a href="https://arnikainfotech.com" target="_blank"><img src="~/img/businesspartner/Arnika3.png" class="img-fluid" alt="Arnika Technologies"></a>
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="businesspartner-logo">
-                            <img src="img/clients/client-2.png" class="img-fluid" alt="">
+                    @*<div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="businesspartner-logo">
+                                <img src="img/clients/client-2.png" class="img-fluid" alt="">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="businesspartner-logo">
-                            <img src="img/clients/client-3.png" class="img-fluid" alt="">
+                        <div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="businesspartner-logo">
+                                <img src="img/clients/client-3.png" class="img-fluid" alt="">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="businesspartner-logo">
-                            <img src="img/clients/client-4.png" class="img-fluid" alt="">
+                        <div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="businesspartner-logo">
+                                <img src="img/clients/client-4.png" class="img-fluid" alt="">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="businesspartner-logo">
-                            <img src="img/clients/client-5.png" class="img-fluid" alt="">
+                        <div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="businesspartner-logo">
+                                <img src="img/clients/client-5.png" class="img-fluid" alt="">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="businesspartner-logo">
-                            <img src="img/clients/client-6.png" class="img-fluid" alt="">
+                        <div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="businesspartner-logo">
+                                <img src="img/clients/client-6.png" class="img-fluid" alt="">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="businesspartner-logo">
-                            <img src="img/clients/client-7.png" class="img-fluid" alt="">
+                        <div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="businesspartner-logo">
+                                <img src="img/clients/client-7.png" class="img-fluid" alt="">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="businesspartner-logo">
-                            <img src="img/clients/client-8.png" class="img-fluid" alt="">
-                        </div>
-                    </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
+                            <div class="businesspartner-logo">
+                                <img src="img/clients/client-8.png" class="img-fluid" alt="">
+                            </div>
+                        </div>*@
 
                 </div>
 
@@ -713,77 +725,76 @@
 
         <!-- #portfolio -->
         @*<section id="testimonials" class="section-bg">
-            <div class="container">
+                <div class="container">
 
-                <header class="section-header">
-                    <h3>Testimonials</h3>
-                </header>
+                    <header class="section-header">
+                        <h3>Testimonials</h3>
+                    </header>
 
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
 
-                        <div class="owl-carousel testimonials-carousel wow fadeInUp">
+                            <div class="owl-carousel testimonials-carousel wow fadeInUp">
 
-                            <div class="testimonial-item">
-                                <img src="img/testimonial-1.jpg" class="testimonial-img" alt="">
-                                <h3>Saul Goodman</h3>
-                                <h4>Ceo &amp; Founder</h4>
-                                <p>
-                                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                                </p>
-                            </div>
+                                <div class="testimonial-item">
+                                    <img src="img/testimonial-1.jpg" class="testimonial-img" alt="">
+                                    <h3>Saul Goodman</h3>
+                                    <h4>Ceo &amp; Founder</h4>
+                                    <p>
+                                        Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                                    </p>
+                                </div>
 
-                            <div class="testimonial-item">
-                                <img src="img/testimonial-2.jpg" class="testimonial-img" alt="">
-                                <h3>Sara Wilsson</h3>
-                                <h4>Designer</h4>
-                                <p>
-                                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                                </p>
-                            </div>
+                                <div class="testimonial-item">
+                                    <img src="img/testimonial-2.jpg" class="testimonial-img" alt="">
+                                    <h3>Sara Wilsson</h3>
+                                    <h4>Designer</h4>
+                                    <p>
+                                        Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                                    </p>
+                                </div>
 
-                            <div class="testimonial-item">
-                                <img src="img/testimonial-3.jpg" class="testimonial-img" alt="">
-                                <h3>Jena Karlis</h3>
-                                <h4>Store Owner</h4>
-                                <p>
-                                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                                </p>
-                            </div>
+                                <div class="testimonial-item">
+                                    <img src="img/testimonial-3.jpg" class="testimonial-img" alt="">
+                                    <h3>Jena Karlis</h3>
+                                    <h4>Store Owner</h4>
+                                    <p>
+                                        Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                                    </p>
+                                </div>
 
-                            <div class="testimonial-item">
-                                <img src="img/testimonial-4.jpg" class="testimonial-img" alt="">
-                                <h3>Matt Brandon</h3>
-                                <h4>Freelancer</h4>
-                                <p>
-                                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                                </p>
-                            </div>
+                                <div class="testimonial-item">
+                                    <img src="img/testimonial-4.jpg" class="testimonial-img" alt="">
+                                    <h3>Matt Brandon</h3>
+                                    <h4>Freelancer</h4>
+                                    <p>
+                                        Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                                    </p>
+                                </div>
 
-                            <div class="testimonial-item">
-                                <img src="img/testimonial-5.jpg" class="testimonial-img" alt="">
-                                <h3>John Larson</h3>
-                                <h4>Entrepreneur</h4>
-                                <p>
-                                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                                </p>
+                                <div class="testimonial-item">
+                                    <img src="img/testimonial-5.jpg" class="testimonial-img" alt="">
+                                    <h3>John Larson</h3>
+                                    <h4>Entrepreneur</h4>
+                                    <p>
+                                        Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                                    </p>
+                                </div>
+
                             </div>
 
                         </div>
-
                     </div>
+
+
                 </div>
+            </section>*@
 
-
-            </div>
-        </section>*@
-    
-    <!-- #testimonials -->
+        <!-- #testimonials -->
         <!--==========================
           Team Section
         ============================-->
-        
-    <!-- #team -->
+        <!-- #team -->
         <!--==========================
           Clients Section
         ============================-->
@@ -866,10 +877,7 @@
 
                     <div class="col-lg-6 col-md-6 footer-info">
                         <a a asp-action="Index" asp-controller="Home" asp-fragment="intro" class="scrollto"> <h4 class="text-light"><img src="~/img/LogoIconMain.png" alt="" class="img-fluid" width="32" height="32"><span> &nbsp;@ViewData["Title"]</span></h4></a>
-                        <p>@ViewData["Title"]  is a pioneer in IT education with a view to offer a broad   portfolio of computer training programs for the corporate as well as   the career oriented youth of the country.</p>
-                        <p>
-                            Your Training is our aim. We focus on offering you the best class-room / virtual experience along with the best customer service, to ensure that you will come back class-after-class. Our customer satisfaction and quality measurement process is monitored by the vendors and we win awards year-after-year demonstrating that we are among the best.
-                        </p>
+                        <p>@ViewData["Title"] is a pioneer in IT education with a view to offer a broad portfolio of computer training programs for the corporate as well as the career-oriented youth of the country. Our mission is to make SOUTH AFRICA and Kingdom of ESWATINI (formerly known as Swaziland), a hub for IT talents..</p>
                     </div>
 
                     <div class="col-lg-2 col-md-6 footer-links">
