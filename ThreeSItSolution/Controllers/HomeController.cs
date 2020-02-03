@@ -14,7 +14,7 @@ namespace ThreeSItSolution.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        //private readonly ILogger<HomeController> _logger;
         private readonly Db3SItSoultion _context;
 
         public HomeController(Db3SItSoultion context)
@@ -62,20 +62,19 @@ namespace ThreeSItSolution.Controllers
 
                 return View(mContactUs);
             }
-            //ViewBag.Name = mContactUs.CName;
-            //ViewBag.Email = mContactUs.CEmailId;
-            _context.MContactUs.Add(mContactUs);
-            _context.SaveChanges();
-            //mContactUs = null;
+            
+            //_context.MContactUs.Add(mContactUs);
+            //_context.SaveChanges();
+            
             SendMail(mContactUs.CEmailId, mContactUs.CSubject, mContactUs.CMessage);
-           // ViewBag.TheResult = true;
           
-           return RedirectToAction("ContactUsThanks", new { _Name = mContactUs.CName, _Email = mContactUs.CEmailId });
+          
+           return RedirectToAction("ContactUsThanks", new { Name = mContactUs.CName, Email = mContactUs.CEmailId });
         }
-        public IActionResult ContactUsThanks(string _Name, string _Email)
+        public IActionResult ContactUsThanks(string Name, string Email)
         {
-            ViewBag.Name = _Name;
-            ViewBag.Email = _Email;
+            ViewBag.Name = Name;
+            ViewBag.Email = Email;
             return View();
         }
     
@@ -106,12 +105,12 @@ namespace ThreeSItSolution.Controllers
                                          (ToAddress,
                                          ToAddress
                                          ));
-                mimeMessage.Cc.Add(new MailboxAddress
+                /*mimeMessage.Cc.Add(new MailboxAddress
                                        ("Dhananjay Kumar Pandey",
                                         "dhananjayp@3s-itsolutions.co.za"
-                                        ));
+                                        ));*/
                 mimeMessage.Subject = Subject; //Subject  
-                mimeMessage.Body = new TextPart("HTML")
+                mimeMessage.Body = new TextPart("plain")
                 {
                     Text = BodyContent
                 };
