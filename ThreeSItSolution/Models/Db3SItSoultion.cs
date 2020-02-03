@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using ThreeSItSolution.Models;
 namespace ThreeSItSolution.Models
 {
     public class Db3SItSoultion:DbContext
@@ -16,6 +17,8 @@ namespace ThreeSItSolution.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
         }
+
+        public DbSet<ThreeSItSolution.Models.MEnquiry> MEnquiry { get; set; }
        
     }
 }
