@@ -12,19 +12,20 @@
 
     <meta content="" name="keywords">
     <meta content="" name="description">
-    <environment include="Staging,Production">
+  
         <!--<strong>HostingEnvironment.EnvironmentName is not Development</strong>-->
         <!-- Favicons -->
         <link href="~/img/LogoIcon48X48.jpg" rel="icon">
         <link href="~/img/LogoIcon48X48.jpg" rel="apple-touch-icon">
 
         <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
-
         <!-- Bootstrap CSS File -->
         <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Libraries CSS Files -->
+
+        @*Libraries CSS Files*@
         <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <link href="~/lib/animate/animate.min.css" rel="stylesheet">
         <link href="~/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
@@ -33,29 +34,7 @@
 
         <!-- Main Stylesheet File -->
         <link href="~/css/style.css" rel="stylesheet">
-    </environment>
-    <environment include="Development">
-        <!--<strong>HostingEnvironment.EnvironmentName is not Development</strong>-->
-        <!-- Favicons -->
-        <link href="~/img/LogoIcon48X48.jpg" rel="icon">
-        <link href="~/img/LogoIcon48X48.jpg" rel="apple-touch-icon">
-
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
-
-        <!-- Bootstrap CSS File -->
-        <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-        <!-- Libraries CSS Files -->
-        <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-        <link href="~/lib/animate/animate.min.css" rel="stylesheet">
-        <link href="~/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-        <link href="~/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="~/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-        <!-- Main Stylesheet File -->
-        <link href="css/style.css" rel="stylesheet">
-    </environment>
+  
     <!-- =======================================================
       Theme Name: NewBiz
       Theme URL: https://bootstrapmade.com/newbiz-bootstrap-business-template/
@@ -327,19 +306,19 @@
                 </div>
 
                 @*<div class="row home-extra">
-                    <div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
-                        <img src="~/img/Policy.jpg" class="img-fluid" alt="">
-                    </div>
+                        <div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
+                            <img src="~/img/Policy.jpg" class="img-fluid" alt="">
+                        </div>
 
-                    <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
-                        <h4>Policy Statement</h4>
-                        <p>
-                            3S IT TRAINING AND BUSINESS SOLUTIONS PTY LTD and its subsidiaries believe that Corporate Social Responsibility is not merely an activity for ensuring South African compliance towards Section 71 of the Companies Act, 2008 along with Companies (Corporate Social Responsibility Policy) Rules 2014, however it’s the responsibility of the company towards the society, by positively impacting the lives of underprivileged.
-                        </p>
-                        <a asp-action="aboutus" asp-controller="Home" class="readmore" style="float:right">Read more </a>
-                    </div>
+                        <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
+                            <h4>Policy Statement</h4>
+                            <p>
+                                3S IT TRAINING AND BUSINESS SOLUTIONS PTY LTD and its subsidiaries believe that Corporate Social Responsibility is not merely an activity for ensuring South African compliance towards Section 71 of the Companies Act, 2008 along with Companies (Corporate Social Responsibility Policy) Rules 2014, however it’s the responsibility of the company towards the society, by positively impacting the lives of underprivileged.
+                            </p>
+                            <a asp-action="aboutus" asp-controller="Home" class="readmore" style="float:right">Read more </a>
+                        </div>
 
-                </div>*@
+                    </div>*@
             </div>
         </section>
         <!--==========================
@@ -923,32 +902,32 @@
             </div>
         </div>
     </footer><!-- #footer -->
-    @*<environment include="Development">*@
-    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-    <!-- Uncomment below i you want to use a preloader -->
-    <!-- <div id="preloader"></div> -->
-    <!-- JavaScript Libraries -->
-    <script src="~/lib/jquery/jquery.min.js"></script>
-    <script src="~/lib/jquery/jquery-migrate.min.js"></script>
-    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="~/lib/easing/easing.min.js"></script>
-    <script src="~/lib/mobile-nav/mobile-nav.js"></script>
-    <script src="~/lib/wow/wow.min.js"></script>
-    <script src="~/lib/waypoints/waypoints.min.js"></script>
-    <script src="~/lib/counterup/counterup.min.js"></script>
-    <script src="~/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="~/lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="~/lib/lightbox/js/lightbox.min.js"></script>
-    <!-- Contact Form JavaScript File -->
-    @*<script src="contactform/contactform.js"></script>*@
+    
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        <!-- Uncomment below i you want to use a preloader -->
+        <!-- <div id="preloader"></div> -->
+        <!-- JavaScript Libraries -->
+        <script src="~/lib/jquery/jquery.min.js"></script>
+        <script src="~/lib/jquery/jquery-migrate.min.js"></script>
+        <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="~/lib/easing/easing.min.js"></script>
+        <script src="~/lib/wow/wow.min.js"></script>
+        <script src="~/lib/waypoints/waypoints.min.js"></script>
+        <script src="~/lib/counterup/counterup.min.js"></script>
+        <script src="~/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="~/lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="~/lib/lightbox/js/lightbox.min.js"></script>
+        <!-- Contact Form JavaScript File -->
+        @*<script src="contactform/contactform.js"></script>*@
 
-    <!-- Template Main Javascript File -->
-    <script src="js/main.js"></script>
-    <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-    </script>
-    @*</environment>*@
+
+
+        <script src="js/main.js"></script>
+        <script>
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
+    
 </body>
 </html>
