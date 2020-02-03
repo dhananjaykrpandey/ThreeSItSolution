@@ -12,6 +12,9 @@
 
     <meta content="" name="keywords">
     <meta content="" name="description">
+
+
+    </style>
     <environment include="Staging,Production">
         <!--<strong>HostingEnvironment.EnvironmentName is not Development</strong>-->
         <!-- Favicons -->
@@ -19,6 +22,8 @@
         <link href="~/img/LogoIcon48X48.jpg" rel="apple-touch-icon">
 
         <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
         <!-- Bootstrap CSS File -->
@@ -55,6 +60,8 @@
 
         <!-- Main Stylesheet File -->
         <link href="css/style.css" rel="stylesheet">
+
+
     </environment>
     <!-- =======================================================
       Theme Name: NewBiz
@@ -75,7 +82,7 @@
             <div class="logo float-left">
                 <!-- Uncomment below if you prefer to use an image logo -->
 
-                <a href="#intro" class="scrollto"> <h6 class="text-dark"><img src="~/img/LogoIconMain.png" alt="" class="img-fluid"><span> @ViewData["Title"]</span></h6></a>
+                <a href="#intro" class="scrollto"> <h7 class="text-dark logoheader"><img src="~/img/LogoIconMain.png" alt="" class="img-fluid"> @ViewData["Title"]</h7></a>
                 @*<h5 class="text-light"><a href="#header"><span>@ViewData["Title"]</span></a></h5>*@
             </div>
 
@@ -163,7 +170,7 @@
             <div class="intro-info">
                 <h2>We provide<br><span>Courses</span><br>that fit for your career growth!</h2>
                 <div>
-                    <a href="#about" class="btn-get-started scrollto">Enquiry</a>
+                    <a asp-action="Index" asp-controller="Enquiry" class="btn-get-started scrollto">Enquiry</a>
                     <a href="#services" class="btn-services scrollto">Our Courses</a>
                 </div>
             </div>
@@ -327,19 +334,19 @@
                 </div>
 
                 @*<div class="row home-extra">
-                    <div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
-                        <img src="~/img/Policy.jpg" class="img-fluid" alt="">
-                    </div>
+                        <div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
+                            <img src="~/img/Policy.jpg" class="img-fluid" alt="">
+                        </div>
 
-                    <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
-                        <h4>Policy Statement</h4>
-                        <p>
-                            3S IT TRAINING AND BUSINESS SOLUTIONS PTY LTD and its subsidiaries believe that Corporate Social Responsibility is not merely an activity for ensuring South African compliance towards Section 71 of the Companies Act, 2008 along with Companies (Corporate Social Responsibility Policy) Rules 2014, however it’s the responsibility of the company towards the society, by positively impacting the lives of underprivileged.
-                        </p>
-                        <a asp-action="aboutus" asp-controller="Home" class="readmore" style="float:right">Read more </a>
-                    </div>
+                        <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
+                            <h4>Policy Statement</h4>
+                            <p>
+                                3S IT TRAINING AND BUSINESS SOLUTIONS PTY LTD and its subsidiaries believe that Corporate Social Responsibility is not merely an activity for ensuring South African compliance towards Section 71 of the Companies Act, 2008 along with Companies (Corporate Social Responsibility Policy) Rules 2014, however it’s the responsibility of the company towards the society, by positively impacting the lives of underprivileged.
+                            </p>
+                            <a asp-action="aboutus" asp-controller="Home" class="readmore" style="float:right">Read more </a>
+                        </div>
 
-                </div>*@
+                    </div>*@
             </div>
         </section>
         <!--==========================

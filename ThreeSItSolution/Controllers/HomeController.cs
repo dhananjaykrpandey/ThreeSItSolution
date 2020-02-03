@@ -62,13 +62,13 @@ namespace ThreeSItSolution.Controllers
 
                 return View(mContactUs);
             }
-            ViewBag.Name = mContactUs.CName;
-            ViewBag.Email = mContactUs.CEmailId;
+            //ViewBag.Name = mContactUs.CName;
+            //ViewBag.Email = mContactUs.CEmailId;
             _context.MContactUs.Add(mContactUs);
             _context.SaveChanges();
             //mContactUs = null;
-         
-            ViewBag.TheResult = true;
+            SendMail(mContactUs.CEmailId, mContactUs.CSubject, mContactUs.CMessage);
+           // ViewBag.TheResult = true;
           
            return RedirectToAction("ContactUsThanks", new { _Name = mContactUs.CName, _Email = mContactUs.CEmailId });
         }
@@ -79,23 +79,23 @@ namespace ThreeSItSolution.Controllers
             return View();
         }
     
-        public void SendMail()
+        public void SendMail(string ToAddress, string Subject, string BodyContent)
         {
             try
             {
                 //From Address    
-                string FromAddress = "pilandupandey@gmail.com";
-                string FromAdressTitle = "pilandupandey@gmail.com";
+                string FromAddress = "donotreply@3s-itsolutions.co.za";
+                string FromAdressTitle = "Do Not Reply";
                 //To Address    
-                string ToAddress = "pilandupandey@gmail.com";
-                string ToAdressTitle = "Microsoft ASP.NET Core";
-                string Subject = "Tesing";
-                string BodyContent = "Testing";
+                //string ToAddress = "pilandupandey@gmail.com";
+                //string ToAdressTitle = "Microsoft ASP.NET Core";
+                //string Subject = "Tesing";
+                //string BodyContent = "Testing";
 
                 //Smtp Server    
-                string SmtpServer = "smtp.gmail.com";
+                string SmtpServer = "mail.3s-itsolutions.co.za";
                 //Smtp Port Number    
-                int SmtpPortNumber = 465;
+                int SmtpPortNumber = 587;
 
                 var mimeMessage = new MimeMessage();
                 mimeMessage.From.Add(new MailboxAddress
@@ -103,26 +103,30 @@ namespace ThreeSItSolution.Controllers
                                          FromAddress
                                          ));
                 mimeMessage.To.Add(new MailboxAddress
-                                         (ToAdressTitle,
+                                         (ToAddress,
                                          ToAddress
                                          ));
+                mimeMessage.Cc.Add(new MailboxAddress
+                                       ("Dhananjay Kumar Pandey",
+                                        "dhananjayp@3s-itsolutions.co.za"
+                                        ));
                 mimeMessage.Subject = Subject; //Subject  
-                mimeMessage.Body = new TextPart("plain")
+                mimeMessage.Body = new TextPart("HTML")
                 {
                     Text = BodyContent
                 };
 
                 using (var client = new SmtpClient())
                 {
-                    client.Connect(SmtpServer, SmtpPortNumber,true);
+                    client.Connect(SmtpServer, SmtpPortNumber,MailKit.Security.SecureSocketOptions.Auto);
                     client.Authenticate(
-                        "pilandupandey@gmail.com",
-                        "dj310382"
+                        "donotreply@3s-itsolutions.co.za",
+                        "Sk#19112018"
                         );
-                    client.SendAsync(mimeMessage);
-                    Console.WriteLine("The mail has been sent successfully !!");
-                    Console.ReadLine();
-                    client.DisconnectAsync(true);
+                    client.Send(mimeMessage);
+                    //Console.WriteLine("The mail has been sent successfully !!");
+                    //Console.ReadLine();
+                    client.Disconnect(true);
                 }
             }
             catch (Exception ex)

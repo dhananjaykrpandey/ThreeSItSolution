@@ -13,18 +13,18 @@ namespace ThreeSItSolution.Models
         [Key]
         public int IID { get; set; }
         [Required(AllowEmptyStrings = false, ErrorMessage = "Please Enter Your Name")]
-        [StringLength(30, ErrorMessage = "{0} length must be between {2} and {1}.", MinimumLength = 6)]
+        [StringLength(50, ErrorMessage = "{0} length must be between {2} and {1}.", MinimumLength = 6)]
         [Display(Name ="Name")]
         public string CName { get; set; }
 
         [Required(AllowEmptyStrings = false, ErrorMessage = "Please Enter Your Email-ID")]
-        [StringLength(30, ErrorMessage = "{0} length must be between {2} and {1}.", MinimumLength = 6)]
+        [StringLength(50, ErrorMessage = "{0} length must be between {2} and {1}.", MinimumLength = 6)]
         [EmailAddress]
         [Display(Name = "Email-Id")]
         public string CEmailId { get; set; }
 
         [Required(AllowEmptyStrings = false, ErrorMessage = "Please Enter Subject")]
-        [StringLength(30, ErrorMessage = "{0} length must be between {2} and {1}.", MinimumLength = 6)]
+        [StringLength(50, ErrorMessage = "{0} length must be between {2} and {1}.", MinimumLength = 6)]
         [Display(Name = "Subject")]
         public string CSubject { get; set; }
         
