@@ -12,20 +12,19 @@
 
     <meta content="" name="keywords">
     <meta content="" name="description">
-  
+    <environment include="Staging,Production">
         <!--<strong>HostingEnvironment.EnvironmentName is not Development</strong>-->
         <!-- Favicons -->
         <link href="~/img/LogoIcon48X48.jpg" rel="icon">
         <link href="~/img/LogoIcon48X48.jpg" rel="apple-touch-icon">
 
         <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
         <!-- Bootstrap CSS File -->
         <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-
-        @*Libraries CSS Files*@
+        <!-- Libraries CSS Files -->
         <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <link href="~/lib/animate/animate.min.css" rel="stylesheet">
         <link href="~/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
@@ -34,7 +33,29 @@
 
         <!-- Main Stylesheet File -->
         <link href="~/css/style.css" rel="stylesheet">
-  
+    </environment>
+    <environment include="Development">
+        <!--<strong>HostingEnvironment.EnvironmentName is not Development</strong>-->
+        <!-- Favicons -->
+        <link href="~/img/LogoIcon48X48.jpg" rel="icon">
+        <link href="~/img/LogoIcon48X48.jpg" rel="apple-touch-icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+        <!-- Bootstrap CSS File -->
+        <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Libraries CSS Files -->
+        <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="~/lib/animate/animate.min.css" rel="stylesheet">
+        <link href="~/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+        <link href="~/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="~/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Main Stylesheet File -->
+        <link href="css/style.css" rel="stylesheet">
+    </environment>
     <!-- =======================================================
       Theme Name: NewBiz
       Theme URL: https://bootstrapmade.com/newbiz-bootstrap-business-template/
@@ -142,7 +163,7 @@
             <div class="intro-info">
                 <h2>We provide<br><span>Courses</span><br>that fit for your career growth!</h2>
                 <div>
-                    <a asp-action="Index" asp-controller="Enquiry" class="btn-get-started scrollto">Enquiry</a>
+                    <a href="#about" class="btn-get-started scrollto">Enquiry</a>
                     <a href="#services" class="btn-services scrollto">Our Courses</a>
                 </div>
             </div>
@@ -306,19 +327,19 @@
                 </div>
 
                 @*<div class="row home-extra">
-                        <div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
-                            <img src="~/img/Policy.jpg" class="img-fluid" alt="">
-                        </div>
+                    <div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
+                        <img src="~/img/Policy.jpg" class="img-fluid" alt="">
+                    </div>
 
-                        <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
-                            <h4>Policy Statement</h4>
-                            <p>
-                                3S IT TRAINING AND BUSINESS SOLUTIONS PTY LTD and its subsidiaries believe that Corporate Social Responsibility is not merely an activity for ensuring South African compliance towards Section 71 of the Companies Act, 2008 along with Companies (Corporate Social Responsibility Policy) Rules 2014, however it’s the responsibility of the company towards the society, by positively impacting the lives of underprivileged.
-                            </p>
-                            <a asp-action="aboutus" asp-controller="Home" class="readmore" style="float:right">Read more </a>
-                        </div>
+                    <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
+                        <h4>Policy Statement</h4>
+                        <p>
+                            3S IT TRAINING AND BUSINESS SOLUTIONS PTY LTD and its subsidiaries believe that Corporate Social Responsibility is not merely an activity for ensuring South African compliance towards Section 71 of the Companies Act, 2008 along with Companies (Corporate Social Responsibility Policy) Rules 2014, however it’s the responsibility of the company towards the society, by positively impacting the lives of underprivileged.
+                        </p>
+                        <a asp-action="aboutus" asp-controller="Home" class="readmore" style="float:right">Read more </a>
+                    </div>
 
-                    </div>*@
+                </div>*@
             </div>
         </section>
         <!--==========================
@@ -783,56 +804,56 @@
 
                 <div class="section-header">
                     <h3>Our CLients</h3>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dere santome nida.</p>
+                    <p>List of Clients</p>
                 </div>
 
                 <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
 
                     <div class="col-lg-3 col-md-4 col-xs-6">
                         <div class="client-logo">
-                            <img src="img/clients/client-1.png" class="img-fluid" alt="">
+                            <img src="~/img/clients/clientLogo.png" class="img-fluid" alt="">
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-xs-6">
                         <div class="client-logo">
-                            <img src="img/clients/client-2.png" class="img-fluid" alt="">
+                            <img src="img/clients/clientLogo.png" class="img-fluid" alt="">
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-xs-6">
                         <div class="client-logo">
-                            <img src="img/clients/client-3.png" class="img-fluid" alt="">
+                            <img src="img/clients/clientLogo.png" class="img-fluid" alt="">
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-xs-6">
                         <div class="client-logo">
-                            <img src="img/clients/client-4.png" class="img-fluid" alt="">
+                            <img src="img/clients/clientLogo.png" class="img-fluid" alt="">
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-xs-6">
                         <div class="client-logo">
-                            <img src="img/clients/client-5.png" class="img-fluid" alt="">
+                            <img src="img/clients/clientLogo.png" class="img-fluid" alt="">
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-xs-6">
                         <div class="client-logo">
-                            <img src="img/clients/client-6.png" class="img-fluid" alt="">
+                            <img src="img/clients/clientLogo.png" class="img-fluid" alt="">
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-xs-6">
                         <div class="client-logo">
-                            <img src="img/clients/client-7.png" class="img-fluid" alt="">
+                            <img src="img/clients/clientLogo.png" class="img-fluid" alt="">
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-xs-6">
                         <div class="client-logo">
-                            <img src="img/clients/client-8.png" class="img-fluid" alt="">
+                            <img src="img/clients/clientLogo.png" class="img-fluid" alt="">
                         </div>
                     </div>
 
@@ -876,10 +897,11 @@
 
                     <div class="col-lg-4 col-md-6 footer-newsletter">
                         <h4>Our Newsletter</h4>
-                        <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
+                        <p>Subscribe to our newsletter!</p>
                         <form action="" method="post">
                             <input type="email" name="email"><input type="submit" value="Subscribe">
                         </form>
+                        <p>You’ll get an email about once a week. We’ll never share your address.</p>
                     </div>
 
                 </div>
@@ -897,37 +919,37 @@
                   Licensing information: https://bootstrapmade.com/license/
                   Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=NewBiz
                 -->
-                Developed by <a href="https://bootstrapmade.com/">Arnika Technologies</a>
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                Developed by <a href="https://arnikainfotech.com/" target="_blank">Arnika Technologies</a>
+                Designed by <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a>
             </div>
         </div>
     </footer><!-- #footer -->
-    
-        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-        <!-- Uncomment below i you want to use a preloader -->
-        <!-- <div id="preloader"></div> -->
-        <!-- JavaScript Libraries -->
-        <script src="~/lib/jquery/jquery.min.js"></script>
-        <script src="~/lib/jquery/jquery-migrate.min.js"></script>
-        <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="~/lib/easing/easing.min.js"></script>
-        <script src="~/lib/wow/wow.min.js"></script>
-        <script src="~/lib/waypoints/waypoints.min.js"></script>
-        <script src="~/lib/counterup/counterup.min.js"></script>
-        <script src="~/lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="~/lib/isotope/isotope.pkgd.min.js"></script>
-        <script src="~/lib/lightbox/js/lightbox.min.js"></script>
-        <!-- Contact Form JavaScript File -->
-        @*<script src="contactform/contactform.js"></script>*@
+    @*<environment include="Development">*@
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <!-- Uncomment below i you want to use a preloader -->
+    <!-- <div id="preloader"></div> -->
+    <!-- JavaScript Libraries -->
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/jquery/jquery-migrate.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/easing/easing.min.js"></script>
+    <script src="~/lib/mobile-nav/mobile-nav.js"></script>
+    <script src="~/lib/wow/wow.min.js"></script>
+    <script src="~/lib/waypoints/waypoints.min.js"></script>
+    <script src="~/lib/counterup/counterup.min.js"></script>
+    <script src="~/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="~/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="~/lib/lightbox/js/lightbox.min.js"></script>
+    <!-- Contact Form JavaScript File -->
+    @*<script src="contactform/contactform.js"></script>*@
 
-
-
-        <script src="js/main.js"></script>
-        <script>
-            $(function () {
-                $('[data-toggle="tooltip"]').tooltip()
-            })
-        </script>
-    
+    <!-- Template Main Javascript File -->
+    <script src="js/main.js"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    @*</environment>*@
 </body>
 </html>
