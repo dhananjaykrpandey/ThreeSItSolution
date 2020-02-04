@@ -30,6 +30,13 @@ namespace ThreeSItSolution
             services.AddResponseCompression();
             services.AddControllersWithViews();
             services.AddRazorPages().AddRazorRuntimeCompilation();
+            services.AddWebOptimizer(pipeline =>
+            {
+                pipeline.MinifyJsFiles("js/main.js", "js/site.js");
+                pipeline.MinifyCssFiles("css/**/*.css");
+                
+            });
+
             services.AddDbContext<Db3SItSoultion>(options => options.UseSqlServer(Configuration.GetConnectionString("DB3SConnection")));
             services.Configure<RouteOptions>(options =>
             {
@@ -54,6 +61,7 @@ namespace ThreeSItSolution
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.UseWebOptimizer();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
