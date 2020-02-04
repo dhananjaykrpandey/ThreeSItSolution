@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "3S IT Training and Business Solution";
+    ViewData["Title"] = "3S IT Training and Business Solutions";
     Layout = null;
 }
 
@@ -15,147 +15,128 @@
 
 
 
-    <environment include="Staging,Production">
-        <!--<strong>HostingEnvironment.EnvironmentName is not Development</strong>-->
-        <!-- Favicons -->
-        <link href="~/img/LogoIcon48X48.jpg" rel="icon">
-        <link href="~/img/LogoIcon48X48.jpg" rel="apple-touch-icon">
 
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+    <!--<strong>HostingEnvironment.EnvironmentName is not Development</strong>-->
+    <!-- Favicons -->
+    <link href="~/img/LogoIcon48X48.jpg" rel="icon">
+    <link href="~/img/LogoIcon48X48.jpg" rel="apple-touch-icon">
 
-        <!-- Bootstrap CSS File -->
-        <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
-        <!-- Libraries CSS Files -->
-        <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-        <link href="~/lib/animate/animate.min.css" rel="stylesheet">
-        <link href="~/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-        <link href="~/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="~/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha256-azvvU9xKluwHFJ0Cpgtf0CYzK7zgtOznnzxV4924X1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.0/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    
+    <link href="~/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap CSS File -->
+    @*<link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">*@
 
-        <!-- Main Stylesheet File -->
-        <link href="~/css/style.css" rel="stylesheet">
-    </environment>
-    <environment include="Development">
-        <!--<strong>HostingEnvironment.EnvironmentName is not Development</strong>-->
-        <!-- Favicons -->
-        <link href="~/img/LogoIcon48X48.jpg" rel="icon">
-        <link href="~/img/LogoIcon48X48.jpg" rel="apple-touch-icon">
+    <!-- Libraries CSS Files -->
+    @*<link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+                <link href="~/lib/animate/animate.min.css" rel="stylesheet">
+                <link href="~/lib/ionicons/css/ionicons.min.css" rel="stylesheet">*@
 
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+            <!-- Main Stylesheet File -->
+            <link href="~/css/style.css" rel="stylesheet">
 
-        <!-- Bootstrap CSS File -->
-        <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+            <!-- =======================================================
+              Theme Name: NewBiz
+              Theme URL: https://bootstrapmade.com/newbiz-bootstrap-business-template/
+              Author: BootstrapMade.com
+              License: https://bootstrapmade.com/license/
+            ======================================================= -->
+        </head>
 
-        <!-- Libraries CSS Files -->
-        <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-        <link href="~/lib/animate/animate.min.css" rel="stylesheet">
-        <link href="~/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-        <link href="~/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="~/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <body>
 
-        <!-- Main Stylesheet File -->
-        <link href="css/style.css" rel="stylesheet">
+            <!--==========================
+            Header
+            ============================-->
+            <header id="header" class="fixed-top">
+                <div class="container">
 
+                    <div class="logo float-left">
+                        <!-- Uncomment below if you prefer to use an image logo -->
 
-    </environment>
-    <!-- =======================================================
-      Theme Name: NewBiz
-      Theme URL: https://bootstrapmade.com/newbiz-bootstrap-business-template/
-      Author: BootstrapMade.com
-      License: https://bootstrapmade.com/license/
-    ======================================================= -->
-</head>
+                        <a href="#intro" class="scrollto"> <h7 class="text-dark logoheader"><img src="~/img/LogoIconMain.png" alt="" class="img-fluid"> @ViewData["Title"]</h7></a>
+                        @*<h5 class="text-light"><a href="#header"><span>@ViewData["Title"]</span></a></h5>*@
+    </div>
 
-<body>
-
-    <!--==========================
-    Header
-    ============================-->
-    <header id="header" class="fixed-top">
-        <div class="container">
-
-            <div class="logo float-left">
-                <!-- Uncomment below if you prefer to use an image logo -->
-
-                <a href="#intro" class="scrollto"> <h7 class="text-dark logoheader"><img src="~/img/LogoIconMain.png" alt="" class="img-fluid"> @ViewData["Title"]</h7></a>
-                @*<h5 class="text-light"><a href="#header"><span>@ViewData["Title"]</span></a></h5>*@
-            </div>
-
-            <nav class="main-nav float-right d-none d-lg-block">
+    <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+            <li class="active"><a asp-action="Index" asp-controller="Home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            @*<li class="drop-down">
+                    <a href="#about">About Us</a>
+                    <ul>
+                        <li><a asp-action="aboutus" asp-controller="Home">Corporate and social</a></li>
+                        <li><a asp-action="aboutus" asp-controller="Home">Policy Statement</a></li>
+                    </ul>
+                </li>*@
+            <li class="drop-down">
+                <a href="#services">Courses</a>
                 <ul>
-                    <li class="active"><a asp-action="Index" asp-controller="Home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    @*<li class="drop-down">
-                            <a href="#about">About Us</a>
-                            <ul>
-                                <li><a asp-action="aboutus" asp-controller="Home">Corporate and social</a></li>
-                                <li><a asp-action="aboutus" asp-controller="Home">Policy Statement</a></li>
-                            </ul>
-                        </li>*@
                     <li class="drop-down">
-                        <a href="#services">Courses</a>
+                        <a href="#">MicorSoft</a>
                         <ul>
-                            <li class="drop-down">
-                                <a href="#">MicorSoft</a>
-                                <ul>
-                                    <li><a href="#">MOS 2016/2019</a></li>
-                                    <li><a href="#">Office 365 2016/2019</a></li>
-                                    <li><a href="#">MCSA Windows Sever 2016</a></li>
-                                    <li><a href="#">MCSA SQL Sever 2014/2016</a></li>
-                                    <li><a href="#">MCSA Web Application</a></li>
-                                    <li><a href="#">Azure Data Scientist Associate</a></li>
-                                </ul>
-                            </li>
-                            <li class="drop-down">
-                                <a href="#">Oracle</a>
-                                <ul>
-                                    <li><a href="#">Oracle Cloud Infrastructure</a></li>
-                                    <li><a href="#">Oracle Database</a></li>
-                                    <li><a href="#">Oracle Enterprise Management</a></li>
-
-                                </ul>
-                            </li>
-                            <li class="drop-down">
-                                <a href="#">Cicso</a>
-                                <ul>
-                                    <li><a href="#">CCNA</a></li>
-                                    <li><a href="#">CCNA Cyber Ops</a></li>
-                                    <li><a href="#">CCNP Enterprise</a></li>
-
-                                </ul>
-                            </li>
-                            <li class="drop-down">
-                                <a href="#">Tableau</a>
-                                <ul>
-                                    <li><a href="#">Tableau Desktop Training</a></li>
-                                    <li><a href="#">Tableau Data Visualization & Machine Learning</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Python</a></li>
-                            <li><a href="#">R-Programing</a></li>
+                            <li><a href="#">MOS 2016/2019</a></li>
+                            <li><a href="#">Office 365 2016/2019</a></li>
+                            <li><a href="#">MCSA Windows Sever 2016</a></li>
+                            <li><a href="#">MCSA SQL Sever 2014/2016</a></li>
+                            <li><a href="#">MCSA Web Application</a></li>
+                            <li><a href="#">Azure Data Scientist Associate</a></li>
+                        </ul>
+                    </li>
+                    <li class="drop-down">
+                        <a href="#">Oracle</a>
+                        <ul>
+                            <li><a href="#">Oracle Cloud Infrastructure</a></li>
+                            <li><a href="#">Oracle Database</a></li>
+                            <li><a href="#">Oracle Enterprise Management</a></li>
 
                         </ul>
                     </li>
-                    <li><a href="#why-us">Why Us</a></li>
-                    <li><a href="#portfolio">Placements</a></li>
-                    <li><a href="#businesspartner">Business Partners</a></li>
-                    @*<li><a href="#contact">Contact Us</a></li>*@
-                    <li><a asp-action="ContactUs" asp-controller="Home">Contact Us</a></li>
-                    <li>
-                        <a href="#contact">
-                            <i class="fa fa-user-circle-o" style="color: #ff689b;" data-toggle="tooltip" data-placement="bottom" title="Login/Register"></i>
-                        </a>
+                    <li class="drop-down">
+                        <a href="#">Cicso</a>
+                        <ul>
+                            <li><a href="#">CCNA</a></li>
+                            <li><a href="#">CCNA Cyber Ops</a></li>
+                            <li><a href="#">CCNP Enterprise</a></li>
+
+                        </ul>
                     </li>
+                    <li class="drop-down">
+                        <a href="#">Tableau</a>
+                        <ul>
+                            <li><a href="#">Tableau Desktop Training</a></li>
+                            <li><a href="#">Tableau Data Visualization & Machine Learning</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Python</a></li>
+                    <li><a href="#">R-Programing</a></li>
 
                 </ul>
-            </nav><!-- .main-nav -->
+            </li>
+            <li><a href="#why-us">Why Us</a></li>
+            <li><a href="#portfolio">Placements</a></li>
+            <li><a href="#businesspartner">Business Partners</a></li>
+            @*<li><a href="#contact">Contact Us</a></li>*@
+            <li><a asp-action="ContactUs" asp-controller="Home">Contact Us</a></li>
+            <li>
+                <a href="#contact">
+                    <i class="fa fa-user-circle-o" style="color: #ff689b;" data-toggle="tooltip" data-placement="bottom" title="Login/Register"></i>
+                </a>
+            </li>
 
-        </div>
+        </ul>
+    </nav><!-- .main-nav -->
+    </div>
     </header><!-- #header -->
     <!--==========================
       Intro Section
@@ -936,19 +917,38 @@
     <!-- Uncomment below i you want to use a preloader -->
     <!-- <div id="preloader"></div> -->
     <!-- JavaScript Libraries -->
-    <script src="~/lib/jquery/jquery.min.js"></script>
-    <script src="~/lib/jquery/jquery-migrate.min.js"></script>
-    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    @*<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>*@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.0/jquery-migrate.min.js" integrity="sha256-JklDYODbg0X+8sPiKkcFURb5z7RvlNMIaE3RA2z97vw=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha256-63ld7aiYP6UxBifJWEzz87ldJyVnETUABZAYs5Qcsmc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.bundle.min.js" integrity="sha256-MSYVjWgrr6UL/9eQfQvOyt6/gsxb6dpwI1zqM5DbLCs=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha256-z6FznuNG1jo9PP3/jBjL6P3tvLMtSwiVAowZPOgo56U=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha256-jDnOKIOq2KNsQZTcBTEnsp76FnfMEttF6AV2DF2fFNE=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.counterup@2.1.0/jquery.counterup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.5/isotope.pkgd.min.js" integrity="sha256-KsHewupnZlPcM8HccYY2Q0NXs1L9B9a/l1DGklAZGrw=" crossorigin="anonymous"></script>
+
+    <script src="~/lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="~/lib/easing/easing.min.js"></script>
     <script src="~/lib/mobile-nav/mobile-nav.js"></script>
-    <script src="~/lib/wow/wow.min.js"></script>
-    <script src="~/lib/waypoints/waypoints.min.js"></script>
-    <script src="~/lib/counterup/counterup.min.js"></script>
-    <script src="~/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="~/lib/isotope/isotope.pkgd.min.js"></script>
     <script src="~/lib/lightbox/js/lightbox.min.js"></script>
-    <!-- Contact Form JavaScript File -->
-    @*<script src="contactform/contactform.js"></script>*@
+
+
+
+    @*<script src="~/lib/wow/wow.min.js"></script>*@
+
+    @*<script src="~/lib/jquery/jquery.min.js"></script>
+            <script src="~/lib/jquery/jquery-migrate.min.js"></script>
+            <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+            <script src="~/lib/waypoints/waypoints.min.js"></script>
+            <script src="~/lib/counterup/counterup.min.js"></script>
+
+            <script src="~/lib/isotope/isotope.pkgd.min.js"></script>
+
+
+
+        <!-- Contact Form JavaScript File -->
+        @*<script src="contactform/contactform.js"></script>*@
 
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
@@ -958,5 +958,5 @@
         })
     </script>
     @*</environment>*@
-</body>
+    </body>
 </html>

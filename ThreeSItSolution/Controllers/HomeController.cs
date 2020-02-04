@@ -25,7 +25,7 @@ namespace ThreeSItSolution.Controllers
         //{
         //    _logger = logger;
         //}
-
+        [ResponseCache(Duration = 10, Location = ResponseCacheLocation.Client, NoStore = false)]
         public IActionResult Index()
         {
             //SendMail();
@@ -42,12 +42,14 @@ namespace ThreeSItSolution.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }   
+        }
+        [ResponseCache(Duration = 10, Location = ResponseCacheLocation.Client, NoStore = false)]
         public IActionResult AboutUs()
         {
           
             return View();
         }
+        [ResponseCache(Duration = 10, Location = ResponseCacheLocation.Client, NoStore = false)]
         public IActionResult ContactUs()
         {
             MContactUs mContactUs = new MContactUs();
@@ -71,6 +73,7 @@ namespace ThreeSItSolution.Controllers
           
            return RedirectToAction("ContactUsThanks", new { Name = mContactUs.CName, Email = mContactUs.CEmailId });
         }
+        [ResponseCache(Duration = 10, Location = ResponseCacheLocation.Client, NoStore = false)]
         public IActionResult ContactUsThanks(string Name, string Email)
         {
             ViewBag.Name = Name;
