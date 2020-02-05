@@ -87,13 +87,13 @@ namespace ThreeSItSolution.Models
         [Column(TypeName = "VARCHAR(200)")]
         public string cCurrentOccupation { get; set; }
 
-                
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Please Enter School/College Name")]
         [StringLength(200, ErrorMessage = "{0} length must be between {2} and {1}.", MinimumLength = 6)]
         [Display(Name = "School/College Name")]
         [Column(TypeName = "VARCHAR(200)")]
         public string cSchaool { get; set; }
-        
-        
+
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Please Enter Reason To Pursue Our Computer Course")]
         [StringLength(2000, ErrorMessage = "{0} length must be between {2} and {1}.", MinimumLength = 6)]
         [Display(Name = "Reason To Pursue Our Computer Course")]
         [Column(TypeName = "VARCHAR(2000)")]

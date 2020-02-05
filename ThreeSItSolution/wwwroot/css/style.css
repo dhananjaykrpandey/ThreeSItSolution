@@ -1195,10 +1195,23 @@ h6 {
     }
 
         #contact .form button[type="submit"]:hover {
-            background: #0067d5;
+            background: #128122;
             cursor: pointer;
         }
 
+    #contact .form button[type="reset"] {
+        background: #ff0027;
+        border: 0;
+        border-radius: 20px;
+        padding: 8px 30px;
+        color: #fff;
+        transition: 0.3s;
+    }
+
+        #contact .form button[type="reset"]:hover {
+            background: #493ba3;
+            cursor: pointer;
+        }
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/

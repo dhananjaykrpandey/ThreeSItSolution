@@ -19,166 +19,219 @@
                     <div id="sendmessage">Your message has been sent. Thank you!</div>
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     @Html.AntiForgeryToken()
-                <form asp-action="Index">
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <form asp-action="Index">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-                    <div class="form-group row">
-                        <label asp-for="cFullName" class="col-sm-2 col-form-label"></label>
-                        <div class="col-sm-10">
-                            <input asp-for="cFullName" class="form-control" placeholder="Full Name" />
-                            <span asp-validation-for="cFullName" class="text-danger"></span>
+                        <div class="form-group row">
+                            <label asp-for="cFullName" class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-8">
+                                <input asp-for="cFullName" class="form-control" placeholder="Full Name" />
+                                <span asp-validation-for="cFullName" class="text-danger"></span>
+                            </div>
                         </div>
-                    </div>
 
 
-                    
-                    <div class="form-group row">
-                        <label asp-for="cAddress" class="col-sm-2 col-form-label"></label>
-                        <div class="col-sm-10">
-                            <textarea type="text" asp-for="cAddress" class="form-control" placeholder="Address" ></textarea>
-                            <span asp-validation-for="cAddress" class="text-danger"></span>
+
+                        <div class="form-group row">
+                            <label asp-for="cAddress" class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-8">
+                                <textarea type="text" asp-for="cAddress" class="form-control" placeholder="Address"></textarea>
+                                <span asp-validation-for="cAddress" class="text-danger"></span>
+                            </div>
                         </div>
-                    </div>
 
 
-                    <div class="form-group row">
-                        <label asp-for="cMobileNo" class="col-sm-2 col-form-label"></label>
-                        <div class="col-sm-3">
-                            <input asp-for="cMobileNo" class="form-control" placeholder="Mobile No." />
-                            <span asp-validation-for="cMobileNo" class="text-danger"></span>
+                        <div class="form-group row">
+                            <label asp-for="cMobileNo" class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-5">
+                                <input asp-for="cMobileNo" class="form-control" placeholder="Mobile No." />
+                                <span asp-validation-for="cMobileNo" class="text-danger"></span>
+                            </div>
                         </div>
-                    </div>
 
 
-                    <div class="form-group row">
-                        <label asp-for="cPhoneNo" class="col-sm-2 col-form-label"></label>
-                        <div class="col-sm-3">
-                            <input asp-for="cPhoneNo" class="form-control" placeholder="Telephone No." />
-                            <span asp-validation-for="cPhoneNo" class="text-danger"></span>
+                        <div class="form-group row">
+                            <label asp-for="cPhoneNo" class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-5">
+                                <input asp-for="cPhoneNo" class="form-control" placeholder="Telephone No." />
+                                <span asp-validation-for="cPhoneNo" class="text-danger"></span>
+                            </div>
                         </div>
-                    </div>
 
 
-                 
-                    <div class="form-group row">
-                        <label asp-for="cEmailId" class="col-sm-2 col-form-label"></label>
-                        <div class="col-sm-5">
-                            <input type="email" asp-for="cEmailId" class="form-control" placeholder="Email - Id (example@example.com)" />
-                            <span asp-validation-for="cEmailId" class="text-danger"></span>
+
+                        <div class="form-group row">
+                            <label asp-for="cEmailId" class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-6">
+                                <input type="email" asp-for="cEmailId" class="form-control" placeholder="Email - Id (example@example.com)" />
+                                <span asp-validation-for="cEmailId" class="text-danger"></span>
+                            </div>
                         </div>
-                    </div>
 
 
-                    <div class="form-group row">
-                        <label asp-for="dDob" class="col-sm-2 col-form-label"></label>
-                        <div class="col-sm-3">
-                            <input type="date" asp-for="dDob" class="form-control" placeholder="Date of Birth" />
-                            <span asp-validation-for="dDob" class="text-danger"></span>
+                        <div class="form-group row">
+                            <label asp-for="dDob" class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-5">
+                                <input type="date" asp-for="dDob" class="form-control" placeholder="Date of Birth" />
+                                <span asp-validation-for="dDob" class="text-danger"></span>
+                            </div>
                         </div>
-                    </div>
 
 
-                    <div class="form-group row">
-                        <label asp-for="cGenger" class="col-sm-2 col-form-label"></label>
-                        <div class="col-sm-3">
-                            <input asp-for="cGenger" class="form-control" placeholder="Gender" />
-                            <span asp-validation-for="cGenger" class="text-danger"></span>
+                        <div class="form-group row">
+                            <label asp-for="cGenger" class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-4">
+                                <select class="form-control" id="sel1" asp-for="cGenger">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+
+                                <span asp-validation-for="cGenger" class="text-danger"></span>
+                            </div>
                         </div>
-                    </div>
 
 
-                   
-                    <div class="form-group row">
-                        <label asp-for="cGuradian" class="col-sm-2 col-form-label"></label>
-                        <div class="col-sm-10">
-                            <input asp-for="cGuradian" class="form-control" placeholder="Guardian's Or Sponsor's Name" />
-                            <span asp-validation-for="cGuradian" class="text-danger"></span>
+
+                        <div class="form-group row">
+                            <label asp-for="cGuradian" class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-8">
+                                <input asp-for="cGuradian" class="form-control" placeholder="Guardian's Or Sponsor's Name" />
+                                <span asp-validation-for="cGuradian" class="text-danger"></span>
+                            </div>
                         </div>
-                    </div>
 
 
-                    
-                    <div class="form-group row">
-                        <label asp-for="cCompnay" class="col-sm-2 col-form-label"></label>
-                        <div class="col-sm-10">
-                            <input asp-for="cCompnay" class="form-control" placeholder="Compnay Name">
-                            <span asp-validation-for="cCompnay" class="text-danger"></span>
+
+                        <div class="form-group row">
+                            <label asp-for="cCompnay" class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-8">
+                                <input asp-for="cCompnay" class="form-control" placeholder="Compnay Name">
+                                <span asp-validation-for="cCompnay" class="text-danger"></span>
+                            </div>
                         </div>
-                    </div>
 
 
-                   
-                    <div class="form-group row">
-                        <label asp-for="cAcademic" class="col-sm-2 col-form-label"></label>
-                        <div class="col-sm-10">
-                            <input asp-for="cAcademic" class="form-control" placeholder="Academic Background" />
-                            <span asp-validation-for="cAcademic" class="text-danger"></span>
+
+                        <div class="form-group row">
+                            <label asp-for="cAcademic" class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-8">
+                                <select class="form-control" name="ddAcademic" id="ddAcademic">
+                                    <option>-Select Academic Qualification-</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>Others</option>
+                                </select>
+                                <br />
+                                <input asp-for="cAcademic" name="cAcademic" id="cAcademic" class="form-control" placeholder="Academic Background" readonly />
+                                <span asp-validation-for="cAcademic" class="text-danger"></span>
+                            </div>
                         </div>
-                    </div>
 
 
-                    <div class="form-group row">
-                        <label asp-for="cCareerBackground" class="col-sm-2 col-form-label"></label>
-                        <div class="col-sm-10">
-                            <input asp-for="cCareerBackground" class="form-control" placeholder="Career BackGround" />
-                            <span asp-validation-for="cCareerBackground" class="text-danger"></span>
+                        <div class="form-group row">
+                            <label asp-for="cCareerBackground" class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-8">
+                                <select class="form-control" name="ddCareerBackground" id="ddCareerBackground">
+                                    <option>-Select Career Background-</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>Others</option>
+                                </select>
+                                <br />
+                                <input asp-for="cCareerBackground" name="cCareerBackground" id="cCareerBackground" class="form-control" placeholder="Career BackGround" readonly />
+                                <span asp-validation-for="cCareerBackground" class="text-danger"></span>
+                            </div>
                         </div>
-                    </div>
 
 
-                    <div class="form-group row">
-                        <label asp-for="cCurrentOccupation" class="col-sm-2 col-form-label"></label>
-                        <div class="col-sm-10">
-                            <input asp-for="cCurrentOccupation" class="form-control" placeholder="Current Occupation" />
-                            <span asp-validation-for="cCurrentOccupation" class="text-danger"></span>
+                        <div class="form-group row">
+                            <label asp-for="cCurrentOccupation" class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-8">
+                                <input asp-for="cCurrentOccupation" class="form-control" placeholder="Current Occupation" />
+                                <span asp-validation-for="cCurrentOccupation" class="text-danger"></span>
+                            </div>
                         </div>
-                    </div>
 
 
-                    
-                    <div class="form-group row">
-                        <label asp-for="cSchaool" class="col-sm-2 col-form-label"></label>
-                        <div class="col-sm-10">
-                            <input asp-for="cSchaool" class="form-control" placeholder="Current Or Last Attended School/College" />
-                            <span asp-validation-for="cSchaool" class="text-danger"></span>
+
+                        <div class="form-group row">
+                            <label asp-for="cSchaool" class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-8">
+                                <input asp-for="cSchaool" class="form-control" placeholder="Current Or Last Attended School/College" />
+                                <span asp-validation-for="cSchaool" class="text-danger"></span>
+                            </div>
                         </div>
-                    </div>
 
 
 
-                    <div class="form-group row">
-                        <label asp-for="cReason" class="col-sm-2 col-form-label"></label>
-                        <div class="col-sm-10">
-                            <textarea asp-for="cReason" class="form-control" placeholder="Reason To Pursue Our Computer Course(s)" rows="5"></textarea>
-                            <span asp-validation-for="cReason" class="text-danger"></span>
+                        <div class="form-group row">
+                            <label asp-for="cReason" class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-8">
+                                <select class="form-control" name="ddReason" id="ddReason">
+                                    <option>-Reason To Pursue Our Computer Course(s)-</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>Others</option>
+                                </select>
+                                <br />
+                                <textarea asp-for="cReason" class="form-control" placeholder="Reason To Pursue Our Computer Course(s)" rows="5" readonly></textarea>
+                                <span asp-validation-for="cReason" class="text-danger"></span>
+                            </div>
                         </div>
-                    </div>
 
 
-                    <div class="form-group row">
-                        <label asp-for="cSourceOfInfo" class="col-sm-2 col-form-label"></label>
-                        <div class="col-sm-10">
-                            <textarea asp-for="cSourceOfInfo" class="form-control" placeholder="Source Of Information Regarding 3S IT Training Programs?"></textarea>
-                            <span asp-validation-for="cSourceOfInfo" class="text-danger"></span>
+                        <div class="form-group row">
+                            <label asp-for="cSourceOfInfo" class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-8">
+                                <select class="form-control" name="ddSourceOfInfo" id="ddSourceOfInfo">
+                                    <option>-Select Source Of Information-</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>Others</option>
+                                </select>
+                                <br />
+                                <textarea asp-for="cSourceOfInfo" class="form-control" placeholder="Source Of Information Regarding 3S IT Training Programs?" readonly></textarea>
+                                <span asp-validation-for="cSourceOfInfo" class="text-danger"></span>
+                            </div>
                         </div>
-                    </div>
 
 
-                    <div class="form-group row">
-                        <label asp-for="cRemakrs" class="col-sm-2 col-form-label"></label>
-                        <div class="col-sm-10">
-                            <textarea asp-for="cRemakrs" class="form-control" placeholder="Remarks If Any"></textarea>
-                            <span asp-validation-for="cRemakrs" class="text-danger"></span>
+                        <div class="form-group row">
+                            <label asp-for="cRemakrs" class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-8">
+                                <textarea asp-for="cRemakrs" class="form-control" placeholder="Remarks If Any" rows="5"></textarea>
+                                <span asp-validation-for="cRemakrs" class="text-danger"></span>
+                            </div>
                         </div>
-                    </div>
 
+                        <br />
 
+                        <div class="form-group row">
+                            <div class="col-sm-5">
+                            </div>
+                            <div class="col-sm-6">
+                                <button type="submit" value="Submit" class="btn btn-outline-primary btn-lg"><i class="fa fa-check-circle"></i> Submit</button>
+                                <button type="reset" value="Reset" class="btn btn-outline-danger btn-lg" ><i class="fa fa-undo"></i> Reset</button>
+                            </div>
+                        </div>
 
-
-                    <div class="form-group">
-                        <input type="submit" value="Create" class="btn btn-primary" />
-                    </div>
-                </form>
+                    </form>
                 </div>
             </div>
 
@@ -187,3 +240,40 @@
 
 </section>
 
+<script type="text/javascript">
+    var txtcAcademic = document.getElementById('cAcademic');
+    var ddcAcademic = document.getElementById('ddAcademic');
+
+    ddcAcademic.onchange = function () {
+        if (this.value == "Others") { document.getElementById("cAcademic").readonly = false; txtcAcademic.value = '' } else { document.getElementById("cAcademic").readonly = true; txtcAcademic.value = this.value; }
+
+
+    }
+
+    var txtCareerBackground = document.getElementById('cCareerBackground');
+    var ddCareerBackground = document.getElementById('ddCareerBackground');
+
+    ddCareerBackground.onchange = function () {
+        if (this.value == "Others") { document.getElementById("cCareerBackground").readonly = false; txtCareerBackground.value = '' } else { document.getElementById("cCareerBackground").readonly = true; txtCareerBackground.value = this.value; }
+
+
+    }
+
+    var txtReason = document.getElementById('cReason');
+    var ddReason = document.getElementById('ddReason');
+
+    ddReason.onchange = function () {
+        if (this.value == "Others") { document.getElementById("cReason").readonly = false; txtReason.value = '' } else { document.getElementById("cReason").readonly = true; txtReason.value = this.value; }
+
+
+    }
+
+    var txtSourceOfInfo = document.getElementById('cSourceOfInfo');
+    var ddSourceOfInfo = document.getElementById('ddSourceOfInfo');
+
+    ddSourceOfInfo.onchange = function () {
+        if (this.value == "Others") { document.getElementById("cSourceOfInfo").readonly = false; txtSourceOfInfo.value = '' } else { document.getElementById("cSourceOfInfo").readonly = true; txtSourceOfInfo.value = this.value; }
+
+
+    }
+</script>
