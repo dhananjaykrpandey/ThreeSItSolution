@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ThreeSItSolution.Models;
 
 namespace ThreeSItSolution.Migrations
 {
     [DbContext(typeof(Db3SItSoultion))]
-    partial class Db3SItSoultionModelSnapshot : ModelSnapshot
+    [Migration("20200206081815_db3smigration")]
+    partial class db3smigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

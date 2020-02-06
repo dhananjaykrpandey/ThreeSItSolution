@@ -69,16 +69,16 @@ namespace ThreeSItSolution.Models
         public string cCompnay { get; set; }
 
 
-        [Required(AllowEmptyStrings = false, ErrorMessage = "Please Select Academic Background")]
-        [StringLength(10, ErrorMessage = "{0} length must be between {2} and {1}.", MinimumLength = 6)]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Please Select/Enter Academic Background")]
+        [StringLength(200, ErrorMessage = "{0} length must be between {2} and {1}.", MinimumLength = 6)]
         [Display(Name = "Academic Background")]
-        [Column(TypeName = "VARCHAR(10)")]
+        [Column(TypeName = "VARCHAR(200)")]
         public string cAcademic { get; set; }
 
-        [Required(AllowEmptyStrings = false, ErrorMessage = "Please Select Career Background")]
-        [StringLength(20, ErrorMessage = "{0} length must be between {2} and {1}.", MinimumLength = 6)]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Please Select/Enter Career Background")]
+        [StringLength(200, ErrorMessage = "{0} length must be between {2} and {1}.", MinimumLength = 6)]
         [Display(Name = "Career Background")]
-        [Column(TypeName = "VARCHAR(20)")]
+        [Column(TypeName = "VARCHAR(200)")]
         public string cCareerBackground { get; set; }
 
         [Required(AllowEmptyStrings = false, ErrorMessage = "Please Enter Current Occupation")]
@@ -93,13 +93,13 @@ namespace ThreeSItSolution.Models
         [Column(TypeName = "VARCHAR(200)")]
         public string cSchaool { get; set; }
 
-        [Required(AllowEmptyStrings = false, ErrorMessage = "Please Enter Reason To Pursue Our Computer Course")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Please Select/Enter Reason To Pursue Our Computer Course")]
         [StringLength(2000, ErrorMessage = "{0} length must be between {2} and {1}.", MinimumLength = 6)]
         [Display(Name = "Reason To Pursue Our Computer Course")]
         [Column(TypeName = "VARCHAR(2000)")]
         public string cReason { get; set; }
 
-        [Required(AllowEmptyStrings = false, ErrorMessage = "Please Enter Source of Information")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Please Select/Enter Source of Information")]
         [StringLength(1000, ErrorMessage = "{0} length must be between {2} and {1}.", MinimumLength = 6)]
         [Display(Name = "Source of Information")]
         [Column(TypeName = "VARCHAR(1000)")]

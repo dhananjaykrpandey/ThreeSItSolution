@@ -5,6 +5,7 @@ namespace ThreeSItSolution.Models
     public class Db3SItSoultion:DbContext
     { 
         public DbSet<MContactUs> MContactUs { get; set; }
+        public DbSet<MEnquiry> MEnquiry { get; set; }
         public Db3SItSoultion(DbContextOptions<Db3SItSoultion> options)
          : base(options)
         { }

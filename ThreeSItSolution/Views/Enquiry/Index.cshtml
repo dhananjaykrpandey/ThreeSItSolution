@@ -1,16 +1,29 @@
 ﻿@model ThreeSItSolution.Models.MEnquiry
 
 @{
-    ViewData["Title"] = "Enquiry";
+    ViewData["Title"] = "3S IT Training and Business Solutions Course Enquiry";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-
 <section id="contact">
     <div class="container-fluid">
 
+        @if (TempData["Success"] != null)
+        {
+
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <h2 class="alert-heading">@ViewData["Title"]</h2>
+            <p> @TempData["Success"]</p>
+            <hr>
+           
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        }
+
         <div class="section-header">
-            <h3>Enquiry</h3>
+            <h3>@ViewData["Title"]</h3>
         </div>
         <div class="row justify-content-lg-center">
             <div class="col-lg-6 col-md-6 col-sm-6">
@@ -19,7 +32,7 @@
                     <div id="sendmessage">Your message has been sent. Thank you!</div>
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     @Html.AntiForgeryToken()
-                    <form asp-action="Index">
+                    <form asp-action="Index" autocomplete="off" spellcheck="true">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
                         <div class="form-group row">
@@ -82,8 +95,8 @@
                             <label asp-for="cGenger" class="col-sm-3 col-form-label"></label>
                             <div class="col-sm-4">
                                 <select class="form-control" id="sel1" asp-for="cGenger">
-                                    <option>Male</option>
-                                    <option>Female</option>
+                                    <option value="M">Male</option>
+                                    <option value="F">Female</option>
                                 </select>
 
                                 <span asp-validation-for="cGenger" class="text-danger"></span>
@@ -117,13 +130,12 @@
                             <div class="col-sm-8">
                                 <select class="form-control" name="ddAcademic" id="ddAcademic">
                                     <option>-Select Academic Qualification-</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>Others</option>
+                                    <option>Form IV or Less</option>
+                                    <option>Form VI</option>
+                                    <option>Diploma / Vendor Certifications (MCSE etc)</option>
+                                    <option>Graduation</option>
+                                    <option>Post Graduation</option>
+                                    <option>Other (please specify):</option>
                                 </select>
                                 <br />
                                 <input asp-for="cAcademic" name="cAcademic" id="cAcademic" class="form-control" placeholder="Academic Background" readonly />
@@ -137,13 +149,12 @@
                             <div class="col-sm-8">
                                 <select class="form-control" name="ddCareerBackground" id="ddCareerBackground">
                                     <option>-Select Career Background-</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>Others</option>
+                                    <option>Computer Science</option>
+                                    <option>Commerce</option>
+                                    <option>Arts</option>
+                                    <option>Engineering</option>
+                                    <option>Management</option>
+                                    <option>Other (please specify):</option>
                                 </select>
                                 <br />
                                 <input asp-for="cCareerBackground" name="cCareerBackground" id="cCareerBackground" class="form-control" placeholder="Career BackGround" readonly />
@@ -177,13 +188,13 @@
                             <div class="col-sm-8">
                                 <select class="form-control" name="ddReason" id="ddReason">
                                     <option>-Reason To Pursue Our Computer Course(s)-</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>Others</option>
+                                    <option>To build a career in computers</option>
+                                    <option>Seeking additional qualifications in order to improve job prospects</option>
+                                    <option>To help get college/university placement abroad</option>
+                                    <option>To use skills in own business or current studies</option>
+                                    <option>To use skills in present job</option>
+                                    <option>General awareness</option>
+                                    <option>Other (please specify):</option>
                                 </select>
                                 <br />
                                 <textarea asp-for="cReason" class="form-control" placeholder="Reason To Pursue Our Computer Course(s)" rows="5" readonly></textarea>
@@ -197,13 +208,11 @@
                             <div class="col-sm-8">
                                 <select class="form-control" name="ddSourceOfInfo" id="ddSourceOfInfo">
                                     <option>-Select Source Of Information-</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>Others</option>
+                                    <option>Newspaper Advertisement</option>
+                                    <option>Email / TV Advertisement</option>
+                                    <option>Hand-out/Flayer Advertisement</option>
+                                    <option>Presentation At 3S IT TRAINING Center, EDENVALE, Johannesburg   </option>
+                                    <option>Other (please specify):</option>
                                 </select>
                                 <br />
                                 <textarea asp-for="cSourceOfInfo" class="form-control" placeholder="Source Of Information Regarding 3S IT Training Programs?" readonly></textarea>
@@ -227,7 +236,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <button type="submit" value="Submit" class="btn btn-outline-primary btn-lg"><i class="fa fa-check-circle"></i> Submit</button>
-                                <button type="reset" value="Reset" class="btn btn-outline-danger btn-lg" ><i class="fa fa-undo"></i> Reset</button>
+                                <button type="reset" value="Reset" class="btn btn-outline-danger btn-lg"><i class="fa fa-undo"></i> Reset</button>
                             </div>
                         </div>
 
@@ -237,43 +246,42 @@
 
         </div>
     </div>
-
 </section>
-
 <script type="text/javascript">
     var txtcAcademic = document.getElementById('cAcademic');
     var ddcAcademic = document.getElementById('ddAcademic');
 
     ddcAcademic.onchange = function () {
-        if (this.value == "Others") { document.getElementById("cAcademic").readonly = false; txtcAcademic.value = '' } else { document.getElementById("cAcademic").readonly = true; txtcAcademic.value = this.value; }
+        if (this.value == "Others" || this.value == "-Select Academic Qualification-") { txtcAcademic.readOnly = false; txtcAcademic.value = '' } else { txtcAcademic.readOnly = true; txtcAcademic.value = this.value; }
 
-
+        txtcAcademic.readonly = txtcAcademic.readOnly;
     }
 
     var txtCareerBackground = document.getElementById('cCareerBackground');
     var ddCareerBackground = document.getElementById('ddCareerBackground');
 
     ddCareerBackground.onchange = function () {
-        if (this.value == "Others") { document.getElementById("cCareerBackground").readonly = false; txtCareerBackground.value = '' } else { document.getElementById("cCareerBackground").readonly = true; txtCareerBackground.value = this.value; }
+        if (this.value == "Others" || this.value == "-Select Career Background-") { txtCareerBackground.readOnly = false; txtCareerBackground.value = '' } else { txtCareerBackground.readOnly = true; txtCareerBackground.value = this.value; }
 
-
+        txtCareerBackground.readonly = txtCareerBackground.readOnly;
     }
 
     var txtReason = document.getElementById('cReason');
     var ddReason = document.getElementById('ddReason');
 
     ddReason.onchange = function () {
-        if (this.value == "Others") { document.getElementById("cReason").readonly = false; txtReason.value = '' } else { document.getElementById("cReason").readonly = true; txtReason.value = this.value; }
+        if (this.value == "Others" || this.value == "-Reason To Pursue Our Computer Course(s)-") { txtReason.readOnly = false; txtReason.value = '' } else { txtReason.readOnly = true; txtReason.value = this.value; }
 
-
+        txtReason.readonly = txtReason.readOnly;
     }
 
     var txtSourceOfInfo = document.getElementById('cSourceOfInfo');
     var ddSourceOfInfo = document.getElementById('ddSourceOfInfo');
 
     ddSourceOfInfo.onchange = function () {
-        if (this.value == "Others") { document.getElementById("cSourceOfInfo").readonly = false; txtSourceOfInfo.value = '' } else { document.getElementById("cSourceOfInfo").readonly = true; txtSourceOfInfo.value = this.value; }
+        if (this.value == "Others" || this.value == "-Select Source Of Information-") { txtSourceOfInfo.readOnly = false; txtSourceOfInfo.value = '' } else { txtSourceOfInfo.readOnly = true; txtSourceOfInfo.value = this.value; }
 
-
+        txtSourceOfInfo.readonly = txtSourceOfInfo.readOnly;
     }
+
 </script>
