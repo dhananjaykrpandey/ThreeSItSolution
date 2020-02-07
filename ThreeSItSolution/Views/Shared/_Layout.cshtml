@@ -111,7 +111,14 @@
                         </ul>
                     </li>
                     <li><a asp-action="Index" asp-controller="Home" asp-fragment="why-us">Why Us</a></li>
-                    <li><a asp-action="Index" asp-controller="Home" asp-fragment="softwareservices">Services</a></li>
+                    <li class="drop-down">
+                        <a asp-action="Index" asp-controller="Home" asp-fragment="softwareServices">Services</a>
+                        <ul>
+                            <li><a asp-action="SoftwareServices" asp-controller="Home" asp-fragment="#">Application Development</a></li>
+                            <li><a asp-action="SoftwareServices" asp-controller="Home" asp-fragment="#">Web Design & Development</a></li>
+                            <li><a asp-action="SoftwareServices" asp-controller="Home" asp-fragment="#">Mobile Application Development</a></li>
+                        </ul>
+                    </li>
                     <li><a asp-action="Index" asp-controller="Home" asp-fragment="businesspartner">Business Partners</a></li>
                     <li><a asp-action="ContactUs" asp-controller="Home">Contact Us</a></li>
                     <li>
