@@ -11,7 +11,7 @@
         {
 
         <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <h2 class="alert-heading">@ViewData["Title"]</h2>
+            <h4 class="alert-heading">@ViewData["Title"]</h4>
             <p> @TempData["Success"]</p>
             <hr>
            
@@ -57,7 +57,7 @@
                         <div class="form-group row">
                             <label asp-for="cMobileNo" class="col-sm-3 col-form-label"></label>
                             <div class="col-sm-5">
-                                <input asp-for="cMobileNo" class="form-control" placeholder="Mobile No." />
+                                <input asp-for="cMobileNo" class="form-control" placeholder="Mobile No." type="number" />
                                 <span asp-validation-for="cMobileNo" class="text-danger"></span>
                             </div>
                         </div>
@@ -66,7 +66,7 @@
                         <div class="form-group row">
                             <label asp-for="cPhoneNo" class="col-sm-3 col-form-label"></label>
                             <div class="col-sm-5">
-                                <input asp-for="cPhoneNo" class="form-control" placeholder="Telephone No." />
+                                <input asp-for="cPhoneNo" class="form-control" placeholder="Telephone No." type="number" />
                                 <span asp-validation-for="cPhoneNo" class="text-danger"></span>
                             </div>
                         </div>

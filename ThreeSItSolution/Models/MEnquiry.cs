@@ -27,13 +27,14 @@ namespace ThreeSItSolution.Models
 
 
         [Required(AllowEmptyStrings = false, ErrorMessage = "Please Enter Mobile No.")]
-        [StringLength(30, ErrorMessage = "{0} length must be between {2} and {1}.", MinimumLength = 6)]
+        [StringLength(10, ErrorMessage = "{0} length must be between {2} and {1}.", MinimumLength = 10)]
         [Column(TypeName = "VARCHAR(30)")]
         [Display(Name = "Mobile No.")]
         public string cMobileNo { get; set; }
 
         [Display(Name = "Telephone No.")]
         [Column(TypeName = "VARCHAR(30)")]
+        [StringLength(10, ErrorMessage = "{0} length must be between {2} and {1}.", MinimumLength = 10)]
         public string cPhoneNo { get; set; }
 
 
