@@ -114,7 +114,7 @@
                         <a href="#services">Courses</a>
                         <ul>
                             <li class="drop-down">
-                                <a asp-action="MicorSoft" asp-controller="Home" asp-fragment="#">MicorSoft</a>
+                                <a asp-action="MicorSoft" asp-controller="Home">MicorSoft</a>
                                 <ul>
                                     <li><a asp-action="MicorSoft" asp-controller="Home" asp-fragment="#">MOS 2016/2019</a></li>
                                     <li><a asp-action="MicorSoft" asp-controller="Home" asp-fragment="#">Office 365 2016/2019</a></li>
@@ -155,14 +155,14 @@
                         </ul>
                     </li>
                     <li><a href="#why-us">Why Us</a></li>
-                    <li class="drop-down">
+                    @*<li class="drop-down">
                         <a href="#softwareservices">Services</a>
                         <ul>
                             <li><a asp-action="SoftwareServices" asp-controller="Home" asp-fragment="#">Application Development</a></li>
                             <li><a asp-action="SoftwareServices" asp-controller="Home" asp-fragment="#">Web Design & Development</a></li>
                             <li><a asp-action="SoftwareServices" asp-controller="Home" asp-fragment="#">Mobile Application Development</a></li>
                         </ul>
-                    </li>
+                    </li>*@
                     <li><a href="#businesspartner">Business Partners</a></li>
                     <li><a asp-action="ContactUs" asp-controller="Home">Contact Us</a></li>
                     <li>
@@ -1070,8 +1070,19 @@
         <!-- Contact Form JavaScript File -->
         @*<script src="contactform/contactform.js"></script>*@
 
+
+    <environment names="Staging,Production">
+        <!-- Main Stylesheet File -->
+        <script src="~/js/main.min.js"></script>
+    </environment>
+    <environment names="Development">
+        <!-- Main Stylesheet File-->
+        <script src="~/js/main.js"></script>
+    </environment>
+
+
     <!-- Template Main Javascript File -->
-    <script src="~/js/main.min.js"></script>
+
     <script>
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()

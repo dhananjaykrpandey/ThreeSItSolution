@@ -225,24 +225,23 @@ namespace ThreeSItSolution.Controllers
             return MessageBoday;
         }
 
-        [HttpGet]
+       
         public IActionResult WhyUs()
         {
             return View();
         }
 
-        [HttpGet]
+      
         public IActionResult MicorSoft()
         {
             return View();
         }
-        [HttpGet]
+   
         public IActionResult Oracle()
         {
             return View();
         }
 
-        [HttpGet]
         public IActionResult Cicso()
         {
             return View();
@@ -254,17 +253,16 @@ namespace ThreeSItSolution.Controllers
             return View();
         }
 
-        [HttpGet]
         public IActionResult Python()
         {
             return View();
         }
-        [HttpGet]
+     
         public IActionResult RPrograming()
         {
             return View();
         }
-        [HttpGet]
+    
         public IActionResult SoftwareServices()
         {
             return View();

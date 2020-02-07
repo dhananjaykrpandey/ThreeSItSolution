@@ -17,7 +17,7 @@
     });
     
     $(document).on('click', '.drop-down a', function(e) {
-      e.preventDefault();
+      //e.preventDefault();
       $(this).next().slideToggle(300);
       $(this).parent().toggleClass('active');
     });
