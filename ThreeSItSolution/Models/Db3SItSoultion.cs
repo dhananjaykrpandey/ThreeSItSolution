@@ -11,7 +11,7 @@ namespace ThreeSItSolution.Models
         { }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlServer(Configuration.GetConnectionString("ArnikaInfotechDBConnection")));
+           //optionsBuilder.UseSqlServer(Configuration.GetConnectionString("ArnikaInfotechDBConnection")));
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

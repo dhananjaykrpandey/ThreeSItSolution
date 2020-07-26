@@ -86,7 +86,7 @@ namespace ThreeSItSolution.Controllers
             try
             {
                 //From Address    
-                string FromAddress = "donotreply@3s-itsolutions.co.za";
+                string FromAddress = "sksingh@3s-itsolutions.arnikainfotech.com";
                 string FromAdressTitle = "Do Not Reply";
                 //To Address    
                 string ToAddress = "info@3s-itsolutions.co.za";
@@ -95,7 +95,7 @@ namespace ThreeSItSolution.Controllers
                 //string BodyContent = "Testing";
 
                 //Smtp Server    
-                string SmtpServer = "mail.3s-itsolutions.co.za";
+                string SmtpServer = "mail.3s-itsolutions.arnikainfotech.com";
                 //Smtp Port Number    
                 int SmtpPortNumber = 587;
 
@@ -123,8 +123,8 @@ namespace ThreeSItSolution.Controllers
                 using var client = new SmtpClient();
                 client.Connect(SmtpServer, SmtpPortNumber, MailKit.Security.SecureSocketOptions.Auto);
                 client.Authenticate(
-                    "donotreply@3s-itsolutions.co.za",
-                    "Sk#19112018"
+                    "sksingh@3s-itsolutions.arnikainfotech.com",
+                    "Welcome#123"
                     );
                 client.Send(mimeMessage);
                 //Console.WriteLine("The mail has been sent successfully !!");
@@ -138,7 +138,7 @@ namespace ThreeSItSolution.Controllers
         }
         public static string MessageBody(string Subject, string BodyContent, string Name)
         {
-            string MessageBoday = string.Format(@"
+            string MessageBoday = $@"
                     <html xmlns = 'http://www.w3.org/1999/xhtml'><head>
                         <meta http - equiv = 'Content-Type' content = 'text/html; charset=UTF-8'/>
                          <title> 3S IT Training and Business Solutions</title>   
@@ -150,7 +150,7 @@ namespace ThreeSItSolution.Controllers
                               <td style = 'padding: 10px 0 30px 0;'>
                                   <table align = 'center' border = '0' cellpadding = '0' cellspacing = '0' width = '600' style = 'border: 1px solid #cccccc; border-collapse: collapse;'>
                                    <tr>
-                                      <td align = 'center' bgcolor = '#ee4c50' style = 'padding: 40px 0 30px 0; color: #153643; font-size: 28px; font - weight: bold; font - family: Arial, sans - serif; color:#ffffff'>3S IT Training and Business Solutions
+                                      <td align = 'center' bgcolor = '#ee4c50' style = 'padding: 40px 0 30px 0; color: #153643; font-size: 32px; font - weight: bold; font - family: Arial, sans - serif; color:#ffffff'>3S IT Training and Business Solutions
                                   </td>
                                         </tr>
                                         <tr>
@@ -163,7 +163,7 @@ namespace ThreeSItSolution.Controllers
                                                                                </tr>
                                                                                 <tr>
                                                                                     <td style = 'padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                                                              Hello {0} <br/>   Your Query
+                                                              Hello { (object)Name} <br/>   Your Query
                                                              </td>
                                                                                   </tr>
                                                                                   <tr>
@@ -176,7 +176,7 @@ namespace ThreeSItSolution.Controllers
                                                                                                   <tr>
                                           
                                                                                                       <td style = 'color: #153643; font-family: Arial, sans-serif; font-size: 24px;'>
-                                                                                                           {1}
+                                                                                                           { (object)Subject}
                                                                                                        </td>
                                            
                                                                                                    </tr>
@@ -184,7 +184,7 @@ namespace ThreeSItSolution.Controllers
                                                                                                    <tr>
                                            
                                                                                                        <td style = 'padding: 25px 0 0 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                                                                                                            {2}
+                                                                                                            { (object)BodyContent}
                                                                                                         </td>
                                             
                                                                                                     </tr>
@@ -209,7 +209,7 @@ namespace ThreeSItSolution.Controllers
                                   <table border = '0' cellpadding = '0' cellspacing = '0' width = '100%'>
                                                     <tr>
                                                         <td style = 'color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;' width = '75%'>
-                                                 Mail Us &#64; 3S IT Training and Business Solutions {	info@3s-itsolutions.co.za  }
+                                                 Mail Us &#64; 3S IT Training and Business Solutions [	info@3s-itsolutions.co.za  ]
 									</td>
                                                           </tr>
                                                       </table>
@@ -220,7 +220,7 @@ namespace ThreeSItSolution.Controllers
                                  </tr>
                               </table>
              </body>
-             </html> ", Name, Subject, BodyContent);
+             </html> ";
 
             return MessageBoday;
         }
